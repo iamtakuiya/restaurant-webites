@@ -1,0 +1,45 @@
+/* ===========================
+* Colors
+============================== */
+$color-primary: #EFF0EB;                  // Main background or primary color
+$color-secondary: #161511;                // Secondary elements or text
+$color-tertiary: #1C2838;                 // Tertiary elements in design
+$color-accent-light: hsl(35, 54%, 67%);   // Lighter accent color for highlights or hover states
+$color-accent: hsl(35, 54%, 35%);          // Standard accent color for buttons or key elements
+$color-accent-dark: hsla(33, 53%, 40%, 0.9); // Darker variant of accent for overlays or shadows
+$color-accent-transparent: hsla(35, 54%, 67%, 0.5); // Semi-transparent light accent for backgrounds
+$color-black-dark: #141D1F;                  // Darker shades for borders or backgrounds
+$color-border: #161511;                   // Color used for borders
+$color-input-field-bg: #FFFFFF;           // Background color for input fields
+$color-overlay-bg: linear-gradient(
+  212deg, rgba(255, 255, 255, 0.8) 0%,
+  rgba(0, 0, 0, 1) 65%,
+  rgba(0, 0, 0, 1) 100%
+);                                           // Background for overlays
+
+/* ===========================
+* Typeface
+============================== */
+$heading-font: 'Playball', cursive;
+$body-font: 'Roboto', sans-serif;
+
+// Font Sizes
+$font-size-heading: 64px;
+$font-size-subheading: 48px;
+$font-size-title-lg: 36px;
+$font-size-title-md: 24px;
+$font-size-kicker: 24px;
+$font-size-body-lg: 18px;
+$font-size-body-md: 16px;
+$font-size-body-sm: 14px;
+$font-size-body-xs: 11px;
+
+/* ===========================
+* Breakpoint
+============================== */
+$breakpoint-large-screen: 1980px;
+$breakpoint-desktop: 1440px;
+$breakpoint-laptop: 960px;
+$breakpoint-tablet: 991px;
+$breakpoint-landscape: 767px;
+$breakpoint-portrait: 360px;
