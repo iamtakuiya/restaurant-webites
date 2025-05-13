@@ -1,15 +1,17 @@
 @use '../../styles/_variables.scss';
 
+/* ===========================
+* Header
+============================== */
 .header {
-  height: 72px;
   padding: 0 64px;
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: green;
 }
 
-.logoWrapper {
+.logoContainer {
 
 }
 
@@ -25,29 +27,119 @@
   }
 
 }
-.linkWrapper {
+.linkContainer {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
   list-style: none;
 }
 
-.btnWrapper {
-
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .btn {
-  padding: 10px 20px;  
+  font-weight: 700;
+  font-size: variables.$font-size-body-lg;
+  padding: 12px 24px;  
   cursor: pointer;
   outline: none;
+  border: 1px solid transparent;
+  z-index: 999;
+  
+  &--primary {
+    background: variables.$color-accent-light;
+    color: variables.$color-secondary;
+    border-color: variables.$color-accent-light;
+  }
+
+  &--secondary {
+    background: transparent;
+    color: variables.$color-primary;
+    border-color: variables.$color-primary;
+  }
 
   &--reserve {
     background: variables.$color-secondary;
     color: variables.$color-primary;
+    border-color: variables.$color-secondary;
   }
 }
 
-
+/* ===========================
+* Hero
+============================== */
 .hero {
-  background: red;
+  max-width: 1440px;
+  width: 100%;
+  max-height: 962px;
+  height: 87vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+  background-image: url('../../assets/images/home/top-banner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background-color: rgba(0, 0, 0, 0.5);
+  //   z-index: 1;
+  // }
+
+  &__heroContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 2;
+  }
+
+  &__textContainer {
+    width: 843px;
+    max-height: 323px;
+    color: variables.$color-primary;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__heading {
+    line-height: 120%;
+    font-size: variables.$font-size-heading;
+    color: inherit;
+  }
+  
+  &__text {
+    font-size: variables.$font-size-body-lg;
+    color: inherit;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    to left bottom,
+    rgba(255, 255, 255, 0.01),
+    rgba(0, 0, 0, 0.4)
+  );
+  z-index: 1;
 }

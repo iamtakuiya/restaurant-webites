@@ -8,7 +8,6 @@ function App() {
 
   return (
     <>
-      <h1>Laidback</h1>
       <HomePage />
     </>
   )

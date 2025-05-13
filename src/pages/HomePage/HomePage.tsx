@@ -1,4 +1,7 @@
 import React from 'react';
+
+// Fontawesome icon
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logos/logo.png';
 import styles from './HomePage.module.scss';
@@ -12,11 +15,11 @@ const HomePage: React.FC<ButtonProps> = ({ variant = 'primary' }) => {
     <>
     {/* Header */}
     <header className={styles.header}>
-      <div className={styles.logoWrapper}>
+      <div className={styles.logoContainer}>
         <img src={logo} alt="LaidBack logo" />
       </div>
       <nav className={styles.navbar}>
-        <ul className={styles.linkWrapper}>
+        <ul className={styles.linkContainer}>
           <li className={styles.navbar__item}><a className={styles.navbar__link} href="/">Home</a></li>
           <li className={styles.navbar__item}><a className={styles.navbar__link} href="/hoursAndLocation">Hours & Location</a></li>
           <li className={styles.navbar__item}><a className={styles.navbar__link} href="/menus">Menus</a></li>
@@ -29,14 +32,25 @@ const HomePage: React.FC<ButtonProps> = ({ variant = 'primary' }) => {
           <li><Link to="/event">Events Info</Link></li> */}
         </ul>
       </nav>
-      <div className={`${styles.btnWrapper}`}>
+      <div className={`${styles.btnContainer}`}>
         <button className={`${styles.btn} ${styles[`btn--${variant = 'reserve'}`]}`}>Reserve</button>
       </div>
     </header>
     {/* Main */}
     <main className={styles.homepage}>
+      {/* Hero Section */}
       <section className={styles.hero}>
-        <h1>Hero section</h1>
+        <div className={styles.overlay}></div>
+        <div className={styles.hero__heroContent}>
+          <div className={styles.hero__textContainer}>
+            <h1 className={styles.hero__heading}>Welcome to LaidBack Eats<br />Your Dining Escape</h1>
+            <p className={styles.hero__text}>Indulge in a delightful culinary experience where comfort meets flavor. Join us for a meal that feels like home.</p>
+          </div>
+          <div className={styles.btnContainer}>
+            <button className={`${styles.btn} ${styles[`btn--${variant = 'primary'}`]}`}>View Menu</button>
+            <button className={`${styles.btn} ${styles[`btn--${variant = 'secondary'}`]}`}>Order Online</button>
+          </div>
+        </div>
       </section>
     </main>
     </>
