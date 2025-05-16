@@ -2,15 +2,24 @@ import React from 'react';
 
 // Fontawesome icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+
 // import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logos/logo.png';
+
+// Images
+import topMenu1 from '../../assets/images/home/top-menu-1.png';
+import avatar from '../../assets/images/home/avatar.png';
+import logoWebflow from '../../assets/images/home/logo-webflow.png';
+
 import styles from './HomePage.module.scss';
 
 interface ButtonProps  {
   variant?: 'primary' | 'secondary' | 'reserve';
 }
 
-const HomePage: React.FC<ButtonProps> = ({ variant = 'primary' }) => {
+const HomePage: React.FC<ButtonProp> = ({ variant = 'primary' }) => {
   return (
     <>
     {/* Header */}
@@ -52,9 +61,115 @@ const HomePage: React.FC<ButtonProps> = ({ variant = 'primary' }) => {
           </div>
         </div>
       </section>
+      {/* Top Menu */}
+      <MenuCard />
     </main>
     </>
   );
 };
+
+interface MenuCardProps {
+  variant?: 'normal' | 'full-width';
+}
+
+const MenuCard: React.FC<MenuCardProps> = ({ variant }) => {
+  return (
+    <section className={styles.topMenu}>
+      <div className={styles.topMenu__headings}>
+          <span>~ Trending ~</span>
+          <h2>Top Menu</h2>
+          <p>You'll <span><FontAwesomeIcon icon={faHeart} /></span> these</p>
+      </div>
+      <article className={styles.topMenu__card}>
+        <header>
+          <figure className={styles.topMenu__imgContainer}>
+            <img 
+              src={topMenu1}
+              alt="Classic Margherita Pizza" 
+            />
+          </figure>
+        </header>
+        <div className={styles.topMenu__content}>
+          <h3 className={styles.topMenu__title}>Classic Margherita Pizza</h3>
+          <div className={styles.topMenu__contentDetails}>
+            <p className={styles.topMenu__body}>Fresh mozzarella, vibrant tomato sauce, and fragrant basil on our hand-tossed crust</p>
+            <span className={styles.topMenu__price}>$14</span>
+          </div>
+        </div>
+      </article>
+      <article className={styles.topMenu__card}>
+        <header>
+          <figure className={styles.topMenu__imgContainer}>
+            <img 
+              src={topMenu1}
+              alt="Classic Margherita Pizza" 
+            />
+          </figure>
+        </header>
+        <div className={styles.topMenu__content}>
+          <h3 className={styles.topMenu__title}>Classic Margherita Pizza</h3>
+          <div className={styles.topMenu__contentDetails}>
+            <p className={styles.topMenu__body}>Fresh mozzarella, vibrant tomato sauce, and fragrant basil on our hand-tossed crust</p>
+            <span className={styles.topMenu__price}>$14</span>
+          </div>
+        </div>
+      </article>
+      <article className={styles.topMenu__card}>
+        <header>
+          <figure className={styles.topMenu__imgContainer}>
+            <img 
+              src={topMenu1}
+              alt="Classic Margherita Pizza" 
+            />
+          </figure>
+        </header>
+        <div className={`${styles.topMenu__content} ${styles.topMenu__contentFull}`}>
+          <div className={styles.topMenu__contentLeft}>
+            <h3 className={styles.topMenu__title}>Classic Margherita Pizza</h3>
+            <div className={styles.topMenu__contentDetails}>
+              <p className={styles.topMenu__body}>Fresh mozzarella, vibrant tomato sauce, and fragrant basil on our hand-tossed crust</p>
+              <span className={styles.topMenu__price}>$14</span>
+            </div>
+          </div>
+          <div className={styles.topMenu__contentRight}>
+            <div className={styles.rating}>
+              <FontAwesomeIcon icon={faStar} />
+              <FontAwesomeIcon icon={faStar} />
+              <FontAwesomeIcon icon={faStar} />
+              <FontAwesomeIcon icon={faStar} />
+              <FontAwesomeIcon icon={faStar} />
+            </div>
+            <div className={styles.review}></div>
+            <blockquote>
+              <p>"A perfect spot for casual dining with friends!"</p>
+              <footer className={styles.review__reviewer}>
+                <div className={styles.review__reviewerContainer}>
+                  <figure className={styles.review__avatar}>
+                    <img 
+                      src={avatar}
+                      alt="Mark Thompson" 
+                    />
+                  </figure>
+                  <div className={styles.review__reviewerInfo}>
+                    <p>Mark Thompson</p>
+                    <span>Event Planner</span>
+                  </div>
+                </div>
+                <div className={styles.review__brandContainer}>
+                  <figure className={styles.review__brand}>
+                    <img 
+                      src={logoWebflow}
+                      alt="Webflow" 
+                    />
+                  </figure>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </article>
+    </section>
+  ) 
+}
 
 export default HomePage;

@@ -48,18 +48,31 @@
   cursor: pointer;
   outline: none;
   border: 1px solid transparent;
+  transition: all 250ms ease-in;
   z-index: 999;
   
   &--primary {
     background: variables.$color-accent-light;
     color: variables.$color-secondary;
     border-color: variables.$color-accent-light;
+
+    &:hover {
+      background: darken(variables.$color-accent-light, 5%);
+      color: variables.$color-secondary;
+      border-color: darken(variables.$color-accent-light, 5%);
+    }
   }
 
   &--secondary {
     background: transparent;
     color: variables.$color-primary;
     border-color: variables.$color-primary;
+
+    &:hover {
+      background: variables.$color-accent-light;
+      color: variables.$color-secondary;
+      border-color: variables.$color-accent-light;
+    }
   }
 
   &--reserve {
@@ -143,3 +156,8 @@
   );
   z-index: 1;
 }
+
+
+/* ===========================
+* Header
+============================== */
