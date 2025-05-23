@@ -1,0 +1,35 @@
+@use 'sass:color';
+@use '../../styles/_variables.scss';
+
+/* ===========================
+* Header
+============================== */
+.header {
+  padding: 0 64px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoContainer {
+
+}
+
+.navbar {
+
+  &__item {
+
+  }
+
+  &__link {
+    font-size: 1rem;
+    font-weight: 600;
+
+    &:hover {
+      color: variables.$color-accent;
+      border-color: variables.$color-accent-light;
+    }
+  }
+
+}

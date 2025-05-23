@@ -16,6 +16,11 @@ $color-overlay-bg: linear-gradient(
   rgba(0, 0, 0, 1) 65%,
   rgba(0, 0, 0, 1) 100%
 );                                           // Background for overlays
+$color-overlay-bg-hero: linear-gradient(
+  to left bottom,
+  rgba(255, 255, 255, 0.01),
+  rgba(0, 0, 0, 0.4)
+);
 
 /* ===========================
 * Typeface
@@ -29,6 +34,7 @@ $font-size-subheading: 48px;
 $font-size-title-lg: 36px;
 $font-size-title-md: 24px;
 $font-size-kicker: 24px;
+$font-size-quote: 20px;
 $font-size-body-lg: 18px;
 $font-size-body-md: 16px;
 $font-size-body-sm: 14px;

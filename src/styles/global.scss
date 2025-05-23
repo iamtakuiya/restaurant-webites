@@ -1,9 +1,11 @@
+/* ===========================
+* Global styles
+============================== */
 body {
   font-family: $body-font;
   color: $color-secondary;
   background-color: $color-primary;
 }
-
 
 h1, h2, h3 {
   font-family: $heading-font;
@@ -17,4 +19,21 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+
+/* ===========================
+* Container Styles
+============================== */
+.linkContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  list-style: none;
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }

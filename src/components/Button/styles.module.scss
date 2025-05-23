@@ -1,0 +1,49 @@
+@use 'sass:color';
+@use '../../styles/_variables.scss';
+
+.btn {
+  font-weight: 700;
+  font-size: variables.$font-size-body-lg;
+  padding: 12px 24px;  
+  cursor: pointer;
+  outline: none;
+  border: 1px solid transparent;
+  transition: all 250ms ease-in;
+  z-index: 999;
+  
+  &--primary {
+    background: variables.$color-accent-light;
+    color: variables.$color-secondary;
+    border-color: variables.$color-accent-light;
+
+    &:hover {
+      background: color.adjust(variables.$color-accent-light,$lightness: 5%);
+      color: variables.$color-secondary;
+      border-color: color.adjust(variables.$color-accent-light, $lightness: 5%);
+    }
+  }
+
+  &--secondary {
+    background: transparent;
+    color: variables.$color-primary;
+    border-color: variables.$color-primary;
+
+    &:hover {
+      background: variables.$color-accent-light;
+      color: variables.$color-secondary;
+      border-color: variables.$color-accent-light;
+    }
+  }
+
+  &--reserve {
+    background: variables.$color-secondary;
+    color: variables.$color-primary;
+    border-color: variables.$color-secondary;
+
+    &:hover {
+      background: variables.$color-accent-light;
+      color: variables.$color-secondary;
+      border-color: variables.$color-accent-light;
+    }
+  }
+}
