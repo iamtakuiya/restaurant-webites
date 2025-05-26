@@ -2,295 +2,131 @@
 @use '../../styles/_variables.scss';
 
 /* ===========================
-* Hero
+* About Us
 ============================== */
-.hero {
-  max-width: 1440px;
-  width: 100%;
-  max-height: 962px;
-  height: 87vh;
+.aboutus {
+  padding: variables.$section-page-padding;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 2rem;
-  background-image: url('../../assets/images/home/top-banner.png');
+  gap: 5rem;
+  font-family: variables.$body-font;
+  
+  &__header {
+  
+  }
+  
+  &__title {
+    font-size: variables.$font-size-heading;
+  }
+  
+  &__content {
+    max-height: 477px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+  }
+  
+  &__imgContainer {
+    max-height: 477px;
+
+    img {
+      height: 477px;
+      width: 424px;
+    }
+  }
+  
+  &__card {
+    background-color: variables.$color-black-dark;
+    color: variables.$color-primary;
+    padding: 60px;
+  }
+
+  &__details {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  &__description {
+    width: 298px;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  &__kicker {
+    font-family: variables.$heading-font;
+    font-size: variables.$font-size-kicker;
+    line-height: 150%;
+  }
+  
+  &__heading {
+    font-family: inherit;
+    font-size: variables.$font-size-heading;
+    line-height: 120%;
+    color: inherit;
+  }
+  
+  &__text {
+    color: inherit;
+    font-weight: 200;
+  }
+}
+
+
+/* ===========================
+* Event
+============================== */
+.event {
+  padding: variables.$section-page-padding;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background-image: url('../../assets//images/home/event-bg.png');
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
   position: relative;
-
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   background-color: rgba(0, 0, 0, 0.5);
-  //   z-index: 1;
-  // }
-
-  &__heroContent {
+  
+  &__content {
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    z-index: 2;
+    z-index: 1;
   }
-
-  &__textContainer {
-    width: 843px;
-    max-height: 323px;
+  
+  &__description {
+    font-family: variables.$body-font;
     color: variables.$color-primary;
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  &__heading {
-    line-height: 120%;
-    font-size: variables.$font-size-heading;
-    color: inherit;
-  }
-  
-  &__text {
-    font-size: variables.$font-size-body-lg;
-    color: inherit;
-  }
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: variables.$color-overlay-bg-hero;
-  z-index: 1;
-}
-
-/* ===========================
-* MenuCard
-============================== */
-.topMenu {
-  padding:112px 60px;
-
-  &__headings {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.25rem;
-    font-family: variables.$heading-font;
-  }
-  
-  &__heading {
-    font-size: variables.$font-size-heading;
-  
-  }
-  
-  &__subheading {
-    font-size: variables.$font-size-kicker;
-  }
-  
-  &__icon {
-    margin-left: 0.5rem;
-  }
-  
-  // Menu Card
-  &Container {
-    padding: 40px 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
     gap: 1rem;
-  }
-  
-  &__card {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-  }
-  
-  &__cardFull {
-    grid-column: span 2;
-  }
-
-  &__content {
-    position: relative;
-  }
-  
-  
-  &__imgContainer {
-    height: fit-content;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
-  &__details {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: flex-end;
-    z-index: 10;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.001),
-      rgba(0, 0, 0, 0.05),
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.7)
-    );
-    padding: 0 30px 15px;
-    color: variables.$color-primary;
-  }
-
-  &__detailsFull {
-    flex-direction: row;
-    align-items: end;
-    justify-content: space-between;
   }
   
   &__title {
-    color: variables.$color-primary;
-    font-family: variables.$body-font;
-    font-size: variables.$font-size-title-md;
+    font-family: inherit;
+    font-size: variables.$font-size-subheading;
+    color: inherit;
   }
   
   &__text {
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
+    max-width: 650px;  
   }
-  
-  &__body {
-    flex: 0.75;
-    text-align: left;
-    font-size: variables.$font-size-body-md;
-    font-weight: 400;
-    line-height: 150%;
-  }
-  
-  &__price {
-    flex-basis: 50px;
-    font-size: variables.$font-size-title-md;
-    font-weight: 600;
-  }
-}
-
-// Details Left
-.topMenu__detailLeft {
-  flex: 0.64;
-}
-
-// Detail Right
-.topMenu__detailRight {}
-
-// Kicker
-.kicker {
-  font-size: variables.$font-size-kicker;
-  position: relative;
-  margin-bottom: -0.5rem;;
-
-  &::before {
-    content: "~";
-    position: absolute;
-    top: 10%;
-    left: -40%;
-    font-size: 2.2rem;
-  }
-
-  &::after {
-    content: "~";
-    position: absolute;
-    top: 10%;
-    right: -25%;
-    font-size: 2.2rem;
-  }
-}
-
-.rating {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-// Reviewer
-.review {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-
-  
-  &__blockquote {
-  }
-
-  &__quote {
-    text-align: right;
-    margin-bottom: 0.5rem;
-    font-size: variables.$font-size-body-md;
-    font-weight: 300;
-  }
-
-  &__reviewer {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  &__reviewerContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  &__avatar {
-    aspect-ratio: 1 / 1;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    overflow: hidden;
-    
-    img {
-      background: red;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-  
-  &__reviewerInfo {
-    font-size: variables.$font-size-body-sm;
-    font-weight: 400;
-  }
-  
-  &__brandContainer {
-    width: 120px;
-  }
-  
-  &__brand {
-  }
-}
-
-.lineVertical {
-  height: inherit;
-  background-color: variables.$color-primary;
-  border: 1px solid variables.$color-primary;
-  opacity: 0.8;
 }
 

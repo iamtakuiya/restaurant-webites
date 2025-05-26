@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from '../Image/Image'; // Adjust path if needed
+import Image from '../../Common/Image/Image'; // Adjust path if needed
 import type { MenuItemData } from './types';
 import styles from './styles.module.scss';
 

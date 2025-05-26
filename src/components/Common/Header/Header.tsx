@@ -1,9 +1,9 @@
 import React from "react";
 // Component
-import Button from "../Button";
+import Button from '../Button';
 
 // import { Link } from 'react-router-dom';
-import logo from '../../assets/images/logos/logo.png';
+import logo from '../../../assets/images/logos/logo.png';
 import styles from './style.module.scss';
 
 const Header: React.FC= () => (

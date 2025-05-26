@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from '../Image/Image'; // Adjust path if needed
+import Image from '../../Common/Image/Image'; // Adjust path if needed
 import ReviewSection from './ReviewSection'; // Import the ReviewSection component
 import type { MenuItemData, ReviewData } from './types';
 import styles from './styles.module.scss';

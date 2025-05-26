@@ -2,14 +2,14 @@
 import type { MenuItemData } from '../types';
 
 // Home menu images
-import homeTopMenu1 from '../../../assets/images/home/top-menu-1.png';
-import homeTopMenu2 from '../../../assets/images/home/top-menu-2.png';
-import homeTopMenu3 from '../../../assets/images/home/top-menu-3.png';
+import homeTopMenu1 from '../../../../assets/images/home/top-menu-1.png';
+import homeTopMenu2 from '../../../../assets/images/home/top-menu-2.png';
+import homeTopMenu3 from '../../../../assets/images/home/top-menu-3.png';
 
 // Main menu images (assuming different images or just using existing ones for example)
-import mainMenu1 from '../../../assets/images/menu/menu-1.png'; // Example for main menu
-import mainMenu2 from '../../../assets/images/menu/menu-2.png';
-import mainMenu3 from '../../../assets/images/menu/menu-3.png';
+import mainMenu1 from '../../../../assets/images/menu/menu-1.png'; // Example for main menu
+import mainMenu2 from '../../../../assets/images/menu/menu-2.png';
+import mainMenu3 from '../../../../assets/images/menu/menu-3.png';
 
 
 // --- Home Page Menu Items ---

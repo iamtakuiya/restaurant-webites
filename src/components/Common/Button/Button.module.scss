@@ -1,5 +1,5 @@
 @use 'sass:color';
-@use '../../styles/_variables.scss';
+@use '../../../styles/_variables.scss';
 
 .btn {
   font-weight: 700;
@@ -38,6 +38,18 @@
   &--reserve {
     background: variables.$color-secondary;
     color: variables.$color-primary;
+    border-color: variables.$color-secondary;
+
+    &:hover {
+      background: variables.$color-accent-light;
+      color: variables.$color-secondary;
+      border-color: variables.$color-accent-light;
+    }
+  }
+
+  &--signup {
+    background: variables.$color-primary;
+    color: variables.$color-secondary;
     border-color: variables.$color-secondary;
 
     &:hover {

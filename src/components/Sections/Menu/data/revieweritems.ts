@@ -2,8 +2,8 @@
 import type { ReviewData } from '../types';
 
 // Correct relative paths for image imports
-import avatar from '../../../assets/images/home/avatar.png';
-import logoWebflow from '../../../assets/images/home/logo-webflow.png';
+import avatar from '../../../../assets/images/home/avatar.png';
+import logoWebflow from '../../../../assets/images/home/logo-webflow.png';
 
 export const reviewItemData: ReviewData = {
   id: 'restaurant-review-1', // A unique ID for this general restaurant review

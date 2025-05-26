@@ -1,5 +1,5 @@
 /* ===========================
-* Global styles
+* Base styles
 ============================== */
 body {
   font-family: $body-font;
@@ -21,6 +21,11 @@ a {
   }
 }
 
+img {
+  width: inherit;
+  height: inherit;
+}
+
 /* ===========================
 * Container Styles
 ============================== */
@@ -36,4 +41,53 @@ a {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+
+/* ===========================
+* line Styles
+============================== */
+.lineVertical {
+  height: inherit;
+  background-color: $color-primary;
+  border: 1px solid $color-primary;
+  opacity: 0.8;
+}
+
+.lineHorizontal {
+  width: 100%;
+  // height: inherit;
+  border: 2px solid $color-secondary;
+  background-color: $color-secondary;
+  opacity: 0.8;
+}
+
+.lineHorizontal--thin {
+  width: 100%;
+  // height: inherit;
+  border: 1px solid $color-secondary;
+  background-color: $color-secondary;
+  opacity: 0.1;
+}
+
+/* ===========================
+* overlay Styles
+============================== */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: $color-overlay-bg-hero;
+  z-index: 1;
+}
+
+.overlay--dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $color-overlay-bg-dark;
+  z-index: 1;
 }

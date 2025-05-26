@@ -1,15 +1,22 @@
 import React from 'react';
 
 // Component
-import Header from '../../components/Header';
-import Button from '../../components/Button';
-import MenuCard from '../../components/Menu';
-import Image from '../../components/Image';
+import Header from '../../components/Common/Header';
+import Button from '../../components/Common/Button';
+import MenuCard from '../../components/Sections/Menu';
+import Image from '../../components/Common/Image';
+import Footer from '../../components/Common/Footer';
 
+// Sections
+import HeroSection from '../../components/Sections/Hero';
+import ExperienceSection from '../../components/Sections/Experience/Experience';
+import GallerySection from '../../components/Sections/Gallery';
+// Data
+import { homeMenuItems } from '../../components/Sections/Menu/data/menuitems';
 import styles from './HomePage.module.scss';
-import { homeMenuItems } from '../../components/Menu/data/menuitems';
 
-import expImage from '../../assets/images/home/experience.png';
+import aboutusImageLeft from '../../assets/images/home/about-us-left.png';
+import aboutusImageRight from '../../assets/images/home/about-us-right.png';
 
 const HomePage: React.FC = () => {
   return (
@@ -25,79 +32,61 @@ const HomePage: React.FC = () => {
       {/* Experience Section */}
       <ExperienceSection />
       {/* Explore Gallery Section */}
+      <GallerySection />
       {/* About Us */}
+      <AboutUsSection />
       {/* Event Section */}
+      <Event />
     </main>
     {/* Footer */}
-    <footer className={styles.footer}>
-      <p>Copyright&copy; Taku.code Alright reserved</p>
-    </footer>
+    <Footer />
     </>
   );
 };
 
-// Hero section
-const HeroSection: React.FC = () => (
-  <section className={styles.hero}>
-    <div className={styles.overlay}></div>
-    <div className={styles.hero__heroContent}>
-      <div className={styles.hero__textContainer}>
-        <h1 className={styles.hero__heading}>Welcome to LaidBack Eats<br />Your Dining Escape</h1>
-        <p className={styles.hero__text}>Indulge in a delightful culinary experience where comfort meets flavor. Join us for a meal that feels like home.</p>
+const AboutUsSection: React.FC = () => (
+  <section className={styles.aboutus}>
+    <header className={styles.aboutus__header}>
+      <h2 className={styles.aboutus__title}>About us</h2>
+    </header>
+    <div className={styles.aboutus__content}>
+      <Image
+        className={styles.aboutus__imgContainer}
+        src={aboutusImageLeft}
+        alt='explore Image'
+      />
+      <div className={styles.aboutus__card}>
+        <div className={styles.aboutus__details}>
+          <div className={styles.aboutus__description}>
+            <p className={styles.aboutus__kicker}>Special features</p>
+            <h3 className={styles.aboutus__heading}>Traditional<br />& Modern</h3>
+            <p className={styles.aboutus__text}>They offer a mix of pasta, sandwiches, and salads, catering to different preferences.</p>
+          </div>
+          <div className="btnContainer">
+            <Button variant='primary' cta='See more' />
+          </div>
+        </div>
       </div>
-      <div className="btnContainer">
-        <Button variant='primary' cta='View Menu' />
-        <Button variant='secondary' cta='Order Online' />
-      </div>
+      <Image
+        className={styles.aboutus__imgContainer}
+        src={aboutusImageRight}
+        alt='explore Image'
+      />
     </div>
   </section>
 );
 
-const ExperienceSection: React.FC = () => (
-  <section className={styles.experience}>
-    <div className={styles.experience__details}>
-      <div className={styles.experience__headings}>
-        <h2 className={styles.experience__heading}>Experience Fresh Ingredients</h2>
+const Event: React.FC = () => (
+  <section className={styles.event}>
+    <div className="overlay--dark"></div>
+    <div className={styles.event__content}>
+      <div className={styles.event__description}>
+        <h2 className={styles.event__title}>Catering & Events<br />Authentic Italian Feasts</h2>
+        <p className={styles.event__text}>Create a sophisticated and memorable event with our authentic Italian catering. We offer customized menus featuring handcrafted pasta, flavorful sauces, and exquisite desserts, ensuring a dining experience.</p>
       </div>
-      <div className={styles.experience__menus}>
-        <div className={styles.experience__menu}>
-          <h3 className={styles.experience__title}>Classic Margherita Pizza</h3>
-          <div className={styles.experience__text}>
-            <p className={styles.experience__body}>Fresh mozzarella, vibrant tomato sauce, and fragrant basil on our hand-tossed crust</p>
-            <span className={styles.experience__price}>$14</span>
-          </div>
-        </div>
-        <div className={styles.experience__menu}>
-          <h3 className={styles.experience__title}>Classic Margherita Pizza</h3>
-          <div className={styles.experience__text}>
-            <p className={styles.experience__body}>Fresh mozzarella, vibrant tomato sauce, and fragrant basil on our hand-tossed crust</p>
-            <span className={styles.experience__price}>$14</span>
-          </div>
-        </div>
-        <div className={styles.experience__menu}>
-          <h3 className={styles.experience__title}>Classic Margherita Pizza</h3>
-          <div className={styles.experience__text}>
-            <p className={styles.experience__body}>Fresh mozzarella, vibrant tomato sauce, and fragrant basil on our hand-tossed crust</p>
-            <span className={styles.experience__price}>$14</span>
-          </div>
-        </div>
-        <div className={styles.lineHorizontal}></div>
-        <div className={styles.experience__menu}>
-          <h3 className={styles.experience__title}>Classic Margherita Pizza</h3>
-          <div className={styles.experience__text}>
-            <p className={styles.experience__body}>Fresh mozzarella, vibrant tomato sauce, and fragrant basil on our hand-tossed crust</p>
-            <span className={styles.experience__price}>$14</span>
-          </div>
-        </div>
+      <div className="btnContainer">
+        <Button variant='primary' cta="Let's Plan" />
       </div>
-    </div>
-    {/* Image */}
-    <div className={styles.experience__imgContainer}>
-      <Image
-        className={styles.experience__imgContainer}
-        src={expImage}
-        alt='Experience Image'
-      />
     </div>
   </section>
 );

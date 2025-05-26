@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import Image from '../Image/Image'; // Adjust path if needed
+import Image from '../../Common/Image/Image'; // Adjust path if needed
 import type { ReviewData } from './types';
 import styles from './styles.module.scss';
 
@@ -34,7 +34,7 @@ const ReviewSection: React.FC<ReviewSectionProps> = ({ review }) => (
             <span>{review.reviewerTitle}</span>
           </div>
         </div>
-        <div className={styles.lineVertical}></div>
+        <div className="lineVertical"></div>
         <div className={styles.review__brandContainer}>
           <Image
             className={styles.review__brand}
