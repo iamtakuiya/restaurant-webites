@@ -4,7 +4,7 @@ import Button from '../Button';
 
 // import { Link } from 'react-router-dom';
 import logo from '../../../assets/images/logos/logo.png';
-import styles from './style.module.scss';
+import styles from './Header.module.scss';
 
 const Header: React.FC= () => (
   <header className={styles.header}>

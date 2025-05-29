@@ -10,7 +10,7 @@ const HeroSection: React.FC = () => (
     <div className={styles.hero__heroContent}>
       <div className={styles.hero__textContainer}>
         <h1 className={styles.hero__heading}>Welcome to LaidBack Eats<br />Your Dining Escape</h1>
-        <p className={styles.hero__text}>Indulge in a delightful culinary experience where comfort meets flavor. Join us for a meal that feels like home.</p>
+        <p className={styles.hero__text}>Indulge in a delightful culinary experience where comfort meets flavor.<br /> Join us for a meal that feels like home.</p>
       </div>
       <div className="btnContainer">
         <Button variant='primary' cta='View Menu' />

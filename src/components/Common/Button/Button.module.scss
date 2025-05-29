@@ -9,7 +9,8 @@
   outline: none;
   border: 1px solid transparent;
   transition: all 250ms ease-in;
-  z-index: 999;
+  z-index: 5;
+  white-space: nowrap;
   
   &--primary {
     background: variables.$color-accent-light;

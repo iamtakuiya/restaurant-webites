@@ -13,7 +13,7 @@ const Footer: React.FC = () => (
     <section className={styles.footer_sectionTop}>
       <div className={styles.sitemapContainer}>
         <nav className={styles.sitemap}>
-          <ul className="linkContainer">
+          <ul className={`${styles.sitemap__list}`}>
             <li className={styles.sitemap__item}><a className={styles.sitemap__link} href="/">Press</a></li>
             <li className={styles.sitemap__item}><a className={styles.sitemap__link} href="/hoursAndLocation">Jobs</a></li>
             <li className={styles.sitemap__item}><a className={styles.sitemap__link} href="/menus">Contact</a></li>
@@ -23,33 +23,31 @@ const Footer: React.FC = () => (
           <Button variant='signup' cta='Email Signup' />
         </div>
       </div>
-      <div className={styles.socials}>
-        <ul className="linkContainer">
-          <li className={styles.socials__item}>
-            <a className={styles.socials__link} href="/">
+      <div className={styles.social}>
+        <ul className={`${styles.social__list}`}>
+          <li className={styles.social__item}>
+            <a className={styles.social__link} href="/">
               <FontAwesomeIcon icon={faXTwitter} />
             </a>
           </li>
-          <li className={styles.socials__item}>
-            <a className={styles.socials__link} href="/">
+          <li className={styles.social__item}>
+            <a className={styles.social__link} href="/">
               <FontAwesomeIcon icon={faFacebook} />
             </a>
           </li>
-          <li className={styles.socials__item}>
-            <a className={styles.socials__link} href="/">
+          <li className={styles.social__item}>
+            <a className={styles.social__link} href="/">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
           </li>
         </ul>
       </div>
-      <div className={styles.footer__conditional}>
-        <nav className={styles.sitemap}>
-          <ul className="linkContainer">
-            <li className={styles.sitemap__item}><a className={styles.sitemap__link} href="/">Terms and Conditions</a></li>
-            <li className={styles.sitemap__item}><a className={styles.sitemap__link} href="/hoursAndLocation">Privacy Policy</a></li>
-            <li className={styles.sitemap__item}><a className={styles.sitemap__link} href="/menus">Cookie Policy</a></li>
-          </ul>
-        </nav>
+      <div className={styles.conditional}>
+        <ul className={styles.conditional__list}>
+          <li className={styles.conditional__item}><a className={styles.conditional__link} href="/">Terms and Conditions</a></li>
+          <li className={styles.conditional__item}><a className={styles.conditional__link} href="/hoursAndLocation">Privacy Policy</a></li>
+          <li className={styles.conditional__item}><a className={styles.conditional__link} href="/menus">Cookie Policy</a></li>
+        </ul>
       </div>
     </section>
     {/* Horizontal line */}
