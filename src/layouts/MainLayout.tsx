@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
+// Main layout
+import Header from '../components/Common/Header';
+import Footer from '../components/Common/Footer';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -8,7 +11,11 @@ interface MainLayoutProps {
 const MainLayout: React.FC<MainLayoutProps>  = ({ children }) => {
   return (
     <div className=''>
-      <h1>MainLayout</h1>
+      <Header />
+      <main>
+        {children}
+      </main>
+      <Footer />
     </div>
   );
 };

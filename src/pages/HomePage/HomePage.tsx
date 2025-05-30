@@ -21,25 +21,21 @@ import aboutusImageRight from '../../assets/images/home/about-us-right.png';
 const HomePage: React.FC = () => {
   return (
     <>
-    {/* Header */}
-    <Header />
-    {/* Main */}
-    <main className={styles.homepage}>
-      {/* Hero Section */}
-      <HeroSection />
-      {/* Top Menu */}
-      <MenuCard menuItems={homeMenuItems} />
-      {/* Experience Section */}
-      <ExperienceSection />
-      {/* Explore Gallery Section */}
-      <GallerySection />
-      {/* About Us */}
-      <AboutUsSection />
-      {/* Event Section */}
-      <Event />
-    </main>
-    {/* Footer */}
-    <Footer />
+      {/* Homepage */}
+      <div className={styles.homepage}>
+        {/* Hero Section */}
+        <HeroSection />
+        {/* Top Menu */}
+        <MenuCard menuItems={homeMenuItems} />
+        {/* Experience Section */}
+        <ExperienceSection />
+        {/* Explore Gallery Section */}
+        <GallerySection />
+        {/* About Us */}
+        <AboutUsSection />
+        {/* Event Section */}
+        <Event />
+      </div>
     </>
   );
 };
