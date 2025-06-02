@@ -4,14 +4,14 @@ import React from 'react';
 // Sub components
 import MenuCardItem from './MenuCardItem';
 import FullMenuCard from './FullMenuCard';
-import MenuHeading from './MenuHeading'; // Assuming you have this component
+import MenuHeading from '../MenuHeading'; // Assuming you have this component
 
 // Data imports
 // import { homeMenuItems } from './data/menuitems';
-import { reviewItemData } from './data/revieweritems'; // Import the *single* general review
+import { reviewItemData } from '../data/revieweritems'; // Import the *single* general review
 // Styles
-import styles from './styles.module.scss';
-import type { MenuItemData } from './types';
+import styles from '../styles.module.scss';
+import type { MenuItemData } from '../types';
 
 interface MenuCardProps {
   menuItems: MenuItemData[];

@@ -1,7 +1,7 @@
 import React from 'react';
-import Image from '../../Common/Image/Image'; // Adjust path if needed
-import type { MenuItemData } from './types';
-import styles from './styles.module.scss';
+import Image from '../../../Common/Image/Image'; // Adjust path if needed
+import type { MenuItemData } from '../types';
+import styles from '../styles.module.scss';
 
 interface MenuCardItemProps {
   item: MenuItemData;

@@ -1,11 +1,9 @@
 import React from 'react';
 
 // Component
-import Header from '../../components/Common/Header';
 import Button from '../../components/Common/Button';
-import MenuCard from '../../components/Sections/Menu';
+import { MenuCard } from '../../components/Sections/Menu';
 import Image from '../../components/Common/Image';
-import Footer from '../../components/Common/Footer';
 
 // Sections
 import HeroSection from '../../components/Sections/Hero';

@@ -20,9 +20,12 @@ const Header: React.FC= () => (
         <li className={styles.navbar__item}>
           <Link className={styles.navbar__link} to="/hoursAndLocation">Hours & Location</Link>
         </li>
+        <li className={styles.navbar__item}>
+          <Link className={styles.navbar__link} to="/menus">Menus</Link>
+        </li>
         {/* <li className={styles.navbar__item}><a className={styles.navbar__link} href="/">Home</a></li>
         <li className={styles.navbar__item}><a className={styles.navbar__link} href="/hoursAndLocation">Hours & Location</a></li> */}
-        <li className={styles.navbar__item}><a className={styles.navbar__link} href="/menus">Menus</a></li>
+        {/* <li className={styles.navbar__item}><a className={styles.navbar__link} href="/menus">Menus</a></li> */}
         <li className={styles.navbar__item}><a className={styles.navbar__link} href="/aboutUs">About Us</a></li>
         <li className={styles.navbar__item}><a className={styles.navbar__link} href="/event">Events Info</a></li>
       </ul>

@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout'
 import HomePage from './pages/HomePage'
 import HoursAndLocation from './pages/HoursAndLocationPage'
-
+import MenuPage from './pages/MenuPage';
 
 function App() {
 
@@ -14,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="hoursandlocation" element={<HoursAndLocation />} />
+          <Route path="menus" element={<MenuPage />} />
         </Routes>
       </MainLayout>
     </Router>

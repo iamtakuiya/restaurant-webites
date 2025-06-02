@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './styles.module.scss';
 
 // Sub components
-import Avatar from '../../Common/Image/Image';
+import Avatar from '../../../Common/Image/Image';
 
 // Images
 import topMenu1 from '../assets/images/home/top-menu-1.png';

@@ -1,1 +1,2 @@
-export { default } from './MenuCard';
+export { default as MenuCard } from './MenuCard/MenuCard';
+export { default as MenuSection } from './MenuSection/MenuSection';
