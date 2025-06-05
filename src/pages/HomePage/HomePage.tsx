@@ -10,7 +10,8 @@ import HeroSection from '../../components/Sections/Hero';
 import ExperienceSection from '../../components/Sections/Experience/Experience';
 import GallerySection from '../../components/Sections/Gallery';
 // Data
-import { homeMenuItems } from '../../components/Sections/Menu/data/menuitems';
+import { homeMenuItems } from '../../assets/data/menuitems.d';
+// Style
 import styles from './HomePage.module.scss';
 
 import aboutusImageLeft from '../../assets/images/home/about-us-left.png';
@@ -38,6 +39,8 @@ const HomePage: React.FC = () => {
   );
 };
 
+// Homepage's Sections
+// Home Page's AboputUsSecion
 const AboutUsSection: React.FC = () => (
   <section className={styles.aboutus}>
     <header className={styles.aboutus__header}>

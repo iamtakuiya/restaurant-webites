@@ -2,52 +2,16 @@
 @use '../../../../styles/variables';
 
 /* ===========================
-* MenuList
+* MenuItem
 ============================== */
-.menuList {
-  padding: variables.$section-page-padding;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1450px;
-  margin: auto;
-  
-  &__details {
-    flex: 0.5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1rem;
-    padding: 0 30px;
-  }
-  
-  &__header {}
-  
-  &__title {
-    line-height: 120%;
-    font-size: variables.$font-size-heading;
-    font-weight: 400;
-    color: inherit;
-  }
-  &__menus {
-    max-width: 628px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: space-around;
-    gap: 1rem;
-  }
-  
-  &__menu {
-    font-family: variables.$body-font;
-  }
+.menuItem {
+  font-family: variables.$body-font;
   
   &__name {
     font-family: inherit;
     font-size: variables.$font-size-title-md;
-    font-weight: 700;
+    font-weight: 500;
+    text-transform: capitalize;
     line-height: 1.2;
   }
   
@@ -60,7 +24,8 @@
   
   &__body {
     max-width: 381px;
-    font-weight: 400;
+    font-size: variables.$font-size-body-lg;
+    font-weight: 300;
     line-height: 1.5;
   }
   
@@ -68,10 +33,11 @@
     font-size: variables.$font-size-title-lg;
     font-weight: 600;
   }
-  
-  &__imgContainer {
-    flex: 0.5;
-    max-height: 640px;
-    max-width: 644px;
-  }
+}
+
+// Fix the styles
+.noDescription {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

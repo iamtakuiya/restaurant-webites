@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Image from '../../Common/Image/Image'; // Adjust path if needed
-import type { ReviewData } from './types';
+import type { ReviewData } from '../../../types/menuType';
 import styles from './styles.module.scss';
 
 interface ReviewSectionProps {

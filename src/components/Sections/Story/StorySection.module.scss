@@ -1,0 +1,66 @@
+@use 'sass:color';
+@use '../../../styles/_variables.scss';
+
+/* ===========================
+* Story Section
+============================== */
+
+.story {
+  padding: variables.$section-page-padding;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  font-family: variables.$body-font;
+  
+  &__content {
+    background-color: variables.$color-primary;
+    color: variables.$color-secondary;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  &__description {
+    padding: 60px;
+    flex:  0.4;
+    max-width: 558px;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  &__kicker {
+    font-family: variables.$heading-font;
+    font-size: variables.$font-size-kicker;
+    line-height: 150%;
+  }
+  
+  &__heading {
+    margin: -0.5rem 0;
+    font-family: inherit;
+    font-size: variables.$font-size-heading;
+    line-height: 120%;
+    color: inherit;
+    white-space: nowrap;
+  }
+  
+  &__text {
+    color: inherit;
+    font-size: variables.$font-size-body-lg;
+    font-weight: 300;
+  }
+  
+  &__img {
+    flex: 0.58;
+  }
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}

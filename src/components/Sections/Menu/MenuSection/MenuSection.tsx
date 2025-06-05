@@ -1,52 +1,58 @@
 import React from "react";
 // Component
-
 import Image from "../../../Common/Image";
+import { DoubleLine } from "../../../Common/Lines";
 import MenuList from "../MenuList";
 import { drinkMenuData, foodMenuData } from "./menudata.d";
-import styles from './styles.module.scss';
-
+// styles
+import styles from './MenuSection.module.scss';
+// Images
 import sideImage from '../../../../assets/images/menu/menu-4.png'
 import dessertImage from '../../../../assets/images/menu/menu-5.png'
 
-
 const MenuSection: React.FC = () => (
   <>
-    <div>
-      {/* <Image /> */}
-      <h3>Special Menu</h3>
-      {/* <Image /> */}
-    </div>
-    <section className={styles.menuList}>
-      <div className={styles.menuList_headingContainer}>
-        <div className={styles.doublelineContainer}>
-          <div className={styles.doublelineUpper}></div>
-          <div className={styles.doublelineBottom}></div>
-        </div>
-        <h2 className={styles.menuList_heading}>Menu</h2>
-        <div className={styles.doublelineContainer}>
-          <div className={styles.doublelineUpper}></div>
-          <div className={styles.doublelineBottom}></div>
-        </div>
+    {/* Menu list section */}
+    <section className={styles.menu}>
+      {/* Menu list heading */}
+      <div className={styles.menu__headingContainer}>
+        <DoubleLine />
+        <h2 className={styles.menu__heading}>Menu</h2>
+        <DoubleLine />
       </div>
-      <div className={styles.menuList_menus}>
-        <div className={styles.menuList__foodMenu}>
-          <h3 className={styles.menuList__title}>Food</h3>
+      {/* Menu list */}
+      <div className={styles.menu__menus}>
+        {/* Food menu */}
+        <div className={styles.menu__menusContainer}>
+          <h3 className={styles.menu__title}>Food</h3>
           {foodMenuData.map((category) => (
             <>
               <MenuList key={category.title} category={category} />
               {category.title === 'Side & More' && (
-                <Image src={sideImage} alt="side & more image" />
+                <Image 
+                  className={styles.menu__img}
+                  src={sideImage} 
+                  alt="side & more image" />
               )}
               {category.title === 'Desserts' && (
-                <Image src={dessertImage} alt="dessert image" />
+                <Image 
+                  className={styles.menu__img}
+                  src={dessertImage} 
+                  alt="dessert image" 
+                />
               )}
             </>
           ))}
         </div>
-        <div className={styles.menuList__drinkMenu}>
-          <h3 className={styles.menuList__title}>Drink</h3>
-          <MenuList category={drinkMenuData[0]} />
+        {/* Drink menu */}
+        <div className={styles.menu__menusContainer}>
+          <h3 className={styles.menu__title}>Drink</h3>
+          {drinkMenuData.map((category) => (
+            <>
+              <MenuList key={category.title} category={category} />
+            </>
+          ))
+          }
         </div>
       </div>
     </section>

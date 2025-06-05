@@ -46,6 +46,12 @@ img {
 /* ===========================
 * line Styles
 ============================== */
+// Single line
+.separator {
+  width: 60%;
+  border: 2px solid $color-secondary;
+}
+
 .lineVertical {
   height: inherit;
   background-color: $color-primary;
@@ -67,6 +73,19 @@ img {
   border: 1px solid $color-secondary;
   background-color: $color-secondary;
   opacity: 0.1;
+}
+
+// Double line
+.doubleline {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__line {
+    width: 100%;
+    border: 5px solid $color-border;
+  }
 }
 
 /* ===========================

@@ -1,9 +1,9 @@
 // src/components/Menu/data/revieweritems.ts
-import type { ReviewData } from '../types';
+import type { ReviewData } from '../../types/menuType';
 
 // Correct relative paths for image imports
-import avatar from '../../../../assets/images/home/avatar.png';
-import logoWebflow from '../../../../assets/images/home/logo-webflow.png';
+import avatar from '../images/home/avatar.png';
+import logoWebflow from '../images/home/logo-webflow.png';
 
 export const reviewItemData: ReviewData = {
   id: 'restaurant-review-1', // A unique ID for this general restaurant review

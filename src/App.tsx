@@ -5,6 +5,7 @@ import MainLayout from './layouts/MainLayout'
 import HomePage from './pages/HomePage'
 import HoursAndLocation from './pages/HoursAndLocationPage'
 import MenuPage from './pages/MenuPage';
+import AboutUs from './pages/AboutUsPage';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="hoursandlocation" element={<HoursAndLocation />} />
           <Route path="menus" element={<MenuPage />} />
+          <Route path="aboutUs" element={<AboutUs />} />
         </Routes>
       </MainLayout>
     </Router>

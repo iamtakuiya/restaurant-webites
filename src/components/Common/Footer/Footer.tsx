@@ -9,6 +9,8 @@ import styles from './Footer.module.scss';
 
 const Footer: React.FC = () => (
   <footer className={styles.footer}>
+    {/* Horizontal line */}
+    <div className="lineHorizontal--thin"></div>
     {/* Top Section */}
     <section className={styles.footer_sectionTop}>
       <div className={styles.sitemapContainer}>

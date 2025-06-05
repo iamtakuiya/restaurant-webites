@@ -1,0 +1,23 @@
+@use 'sass:color';
+@use '../../../../styles/variables';
+
+/* ===========================
+* SpecialMenuBlock
+============================== */
+// Special menu block
+.specialMenuBlock {
+  padding: variables.$section-page-padding-sm;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  &__img {
+    max-width: 310px;
+    max-height: 250px;
+  }
+  
+  &__heading {
+    font-size: variables.$font-size-subheading;
+  }
+}
+

@@ -8,15 +8,22 @@ interface MenuProps {
   category: CategoryData;
 }
 
+/**
+ * MenuList have a variety of a menu list.
+ * Such as Food, drink and more!
+ */
 const MenuList: React.FC<MenuProps> = ({ category }) => (
-  <div className={styles.MenuItem}>
-    <div className={styles.MenuItem__details}>
-      <header className={styles.MenuItem__header}>
-        <h2 className={styles.MenuItem__title}>{category.title}</h2>
+  <div className={styles.menuList}>
+    <div className={styles.menuList__details}>
+      <header className={styles.menuList__header}>
+        <h2 className={styles.menuList__title}>{category.title}</h2>
       </header>
-      <div className={styles.MenuItem__menus}>
+      <div className={styles.menuList__menus}>
         {category.items.map((item, index) => (
-          <MenuItem key={index} {...item} />
+          <MenuItem 
+            key={index} 
+            {...item} 
+          />
         ))}
       </div>
     </div>
