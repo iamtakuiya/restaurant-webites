@@ -1,0 +1,241 @@
+@use 'sass:color';
+@use '../../styles/_variables.scss';
+
+// import Image1 from '../../assets/images/events/image-1.png';
+// import Image2 from '../../assets/images/events/image-2.png';
+
+:root {
+  --image1: url('../../assets/images/events/image-1.png');
+}
+
+/* ===========================
+* EventBanner
+============================== */
+.eventBanner {
+  padding: 80px 0;
+  display: grid; 
+  place-content: center;
+
+  &__container {
+    position: relative;
+    width: 713px;
+    height: 498px;
+  }
+
+  &__img {
+    max-width: 404px;
+    max-height: 432px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-shadow: variables.$color-shadow;
+  }
+  
+  &__content {
+    padding: 75.5px 26px;
+    max-width: 363px;
+    max-height: 420px;
+    background-color: variables.$color-primary;
+    border: 3px solid variables.$color-accent-transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: start;
+    justify-content: flex-start;
+  }
+  
+  &__heading {
+    color: variables.$color-accent-transparent;
+    font-size: variables.$font-size-title-lg;
+  }
+  
+  &__description {
+    font-size: variables.$font-size-body-md;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+/* ===========================
+* Discover upcoming block
+============================== */
+.discover {
+  background-image: url('../../assets/images/events/image-1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: clamp(250px, 300px, 320px);
+  display: grid;
+  place-content: center;
+
+  &__header {
+    padding: 10px;
+    color: variables.$color-primary;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  &__headline {
+    font-size: variables.$font-size-subheading;
+    color: inherit;
+  }
+}
+
+/* ===========================
+* Book a Table
+============================== */
+.bookingForm {
+  padding: 60px 64px;
+  display: grid;
+  place-content: center;
+  
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+
+  &__content {
+    max-width: 314px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  &__heading {
+    width: 100%;
+    font-size: variables.$font-size-title-md; 
+  }
+
+  &__description {
+    font-size: variables.$font-size-body-md;
+    font-weight: 200;
+  }
+}
+
+.formContainer {
+  padding: 22px 38px;
+  // max-width: 294px;
+  width: 50%;
+  // height: 309px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: variables.$color-tertiary;
+  color: variables.$color-primary;
+
+  &__content {
+    text-align: center;
+  }
+
+  &__heading {
+    font-size: variables.$font-size-title-sm;
+    font-weight: 600;
+  }
+
+  &__text {
+    font-size: variables.$font-size-body-lg;
+    font-weight: 400;
+    width: 250px;
+  }
+}
+
+.form {
+  padding: 24px 48px;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  // grid-template-rows: repeat(4, 4fr);
+  gap: 1rem;
+
+  &__fieldItem {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border: none;
+  }
+
+  &__label {
+    display: none;
+  }
+
+  &__input {
+    height: 34px;
+    padding: 0 6px;
+    outline: variables.$color-accent;
+    border: none;
+    border-bottom: 1px solid variables.$color-accent;
+    background-color: transparent;
+    color: inherit;
+  }
+}
+
+input::placeholder {
+  color: variables.$color-primary;
+}
+
+.form__row--full {
+  grid-column: 1 / -1;
+}
+
+/* ===========================
+* Special feature section
+============================== */
+
+
+/* ===========================
+* Special feature section
+============================== */
+.specialFeature {
+  padding: variables.$section-page-padding;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background-image: url('../../assets//images/home/event-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  
+  &__content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 1;
+  }
+  
+  &__description {
+    font-family: variables.$body-font;
+    color: variables.$color-primary;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  &__title {
+    font-family: inherit;
+    font-size: variables.$font-size-subheading;
+    color: inherit;
+  }
+  
+  &__text {
+    max-width: 750px;
+    font-size: variables.$font-size-body-xl;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+}

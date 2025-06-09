@@ -52,6 +52,11 @@ img {
   border: 2px solid $color-secondary;
 }
 
+.separator--sm {
+  width: 35%;
+  border: 2px solid $color-secondary;
+}
+
 .lineVertical {
   height: inherit;
   background-color: $color-primary;

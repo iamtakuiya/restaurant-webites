@@ -11,6 +11,7 @@ $color-accent-transparent: hsla(35, 54%, 67%, 0.5); // Semi-transparent light ac
 $color-black-dark: #141D1F;                  // Darker shades for borders or backgrounds
 $color-border: #161511;                   // Color used for borders
 $color-input-field-bg: #FFFFFF;           // Background color for input fields
+// Overlay
 $color-overlay-bg: linear-gradient(
   212deg, rgba(255, 255, 255, 0.8) 0%,
   rgba(0, 0, 0, 1) 65%,
@@ -27,6 +28,8 @@ $color-overlay-bg-dark: linear-gradient(
   rgba(0, 0, 0, 0.25), 
   rgba(0, 0, 0, 0.35)
 );
+// Shadow
+$color-shadow: 15px 13px 0 -5px hsla(35, 54%, 67%, 0.5);
 
 
 /* ===========================
@@ -39,7 +42,8 @@ $body-font: 'Roboto', sans-serif;
 $font-size-heading: 64px;
 $font-size-subheading: 48px;
 $font-size-title-lg: 36px;
-$font-size-title-md: 24px;
+$font-size-title-md: 32px;
+$font-size-title-sm: 24px;
 $font-size-kicker: 24px;
 $font-size-quote: 20px;
 $font-size-body-xl: 21px;

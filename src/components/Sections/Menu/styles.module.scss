@@ -94,7 +94,7 @@
   &__title {
     color: variables.$color-primary;
     font-family: variables.$body-font;
-    font-size: variables.$font-size-title-md;
+    font-size: variables.$font-size-title-sm;
   }
   
   &__text {
@@ -113,7 +113,7 @@
   
   &__price {
     flex-basis: 50px;
-    font-size: variables.$font-size-title-md;
+    font-size: variables.$font-size-title-sm;
     font-weight: 600;
   }
 }
