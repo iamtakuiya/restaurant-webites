@@ -3,6 +3,7 @@ import React from "react";
 import Image from "../../Common/Image";
 import styles from "./Gallery.module.scss";
 
+// Explore
 import explore1 from '../../../assets/images/gallery/gallery-1.png';
 import explore2 from '../../../assets/images/gallery/gallery-2.png';
 import explore3 from '../../../assets/images/gallery/gallery-3.png';

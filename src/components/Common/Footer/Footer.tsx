@@ -16,9 +16,9 @@ const Footer: React.FC = () => (
       <div className={styles.sitemapContainer}>
         <nav className={styles.sitemap}>
           <ul className={`${styles.sitemap__list}`}>
-            <li className={styles.sitemap__item}><a className={styles.sitemap__link} href="/">Press</a></li>
-            <li className={styles.sitemap__item}><a className={styles.sitemap__link} href="/hoursAndLocation">Jobs</a></li>
-            <li className={styles.sitemap__item}><a className={styles.sitemap__link} href="/menus">Contact</a></li>
+            <li className={styles.sitemap__item}><a className={styles.sitemap__link} aria-disabled="true">Press</a></li>
+            <li className={styles.sitemap__item}><a className={styles.sitemap__link} aria-disabled="true">Jobs</a></li>
+            <li className={styles.sitemap__item}><a className={styles.sitemap__link} aria-disabled="true">Contact</a></li>
           </ul>
         </nav>
         <div className="btnContainer">
@@ -28,17 +28,17 @@ const Footer: React.FC = () => (
       <div className={styles.social}>
         <ul className={`${styles.social__list}`}>
           <li className={styles.social__item}>
-            <a className={styles.social__link} href="/">
+            <a className={styles.social__link} aria-disabled="true">
               <FontAwesomeIcon icon={faXTwitter} />
             </a>
           </li>
           <li className={styles.social__item}>
-            <a className={styles.social__link} href="/">
+            <a className={styles.social__link} aria-disabled="true">
               <FontAwesomeIcon icon={faFacebook} />
             </a>
           </li>
           <li className={styles.social__item}>
-            <a className={styles.social__link} href="/">
+            <a className={styles.social__link} aria-disabled="true">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
           </li>
@@ -46,9 +46,9 @@ const Footer: React.FC = () => (
       </div>
       <div className={styles.conditional}>
         <ul className={styles.conditional__list}>
-          <li className={styles.conditional__item}><a className={styles.conditional__link} href="/">Terms and Conditions</a></li>
-          <li className={styles.conditional__item}><a className={styles.conditional__link} href="/hoursAndLocation">Privacy Policy</a></li>
-          <li className={styles.conditional__item}><a className={styles.conditional__link} href="/menus">Cookie Policy</a></li>
+          <li className={styles.conditional__item}><a className={styles.conditional__link} aria-disabled="true">Terms and Conditions</a></li>
+          <li className={styles.conditional__item}><a className={styles.conditional__link} aria-disabled="true">Privacy Policy</a></li>
+          <li className={styles.conditional__item}><a className={styles.conditional__link} aria-disabled="true">Cookie Policy</a></li>
         </ul>
       </div>
     </section>

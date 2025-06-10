@@ -6,57 +6,7 @@
 
 :root {
   --image1: url('../../assets/images/events/image-1.png');
-}
-
-/* ===========================
-* EventBanner
-============================== */
-.eventBanner {
-  padding: 80px 0;
-  display: grid; 
-  place-content: center;
-
-  &__container {
-    position: relative;
-    width: 713px;
-    height: 498px;
-  }
-
-  &__img {
-    max-width: 404px;
-    max-height: 432px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    box-shadow: variables.$color-shadow;
-  }
-  
-  &__content {
-    padding: 75.5px 26px;
-    max-width: 363px;
-    max-height: 420px;
-    background-color: variables.$color-primary;
-    border: 3px solid variables.$color-accent-transparent;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: start;
-    justify-content: flex-start;
-  }
-  
-  &__heading {
-    color: variables.$color-accent-transparent;
-    font-size: variables.$font-size-title-lg;
-  }
-  
-  &__description {
-    font-size: variables.$font-size-body-md;
-    font-weight: 400;
-    line-height: 24px;
-  }
+  --image2: url('../../assets/images/events/image-2.png');
 }
 
 /* ===========================
@@ -93,13 +43,18 @@
   place-content: center;
   
   &__container {
+    max-width: 910px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 5rem;
+    flex-wrap: wrap;
+    gap: 2rem;
   }
 
   &__content {
-    max-width: 314px;
+    flex: 0.5;
+    min-width: 340px;
+    padding: 125px 60px 60px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -119,15 +74,14 @@
 }
 
 .formContainer {
-  padding: 22px 38px;
-  // max-width: 294px;
-  width: 50%;
-  // height: 309px;
+  flex: 0.5;
+  padding: 60px 48px;
+  height: 480px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 2.5rem;
   background-color: variables.$color-tertiary;
   color: variables.$color-primary;
 
@@ -148,10 +102,8 @@
 }
 
 .form {
-  padding: 24px 48px;
   display: grid;
   grid-template-columns: repeat(2, 2fr);
-  // grid-template-rows: repeat(4, 4fr);
   gap: 1rem;
 
   &__fieldItem {
@@ -159,6 +111,10 @@
     flex-direction: column;
     align-items: stretch;
     border: none;
+  }
+
+  &__fieldItem:last-child {
+    margin-top: 1rem;
   }
 
   &__label {
@@ -176,18 +132,9 @@
   }
 }
 
-input::placeholder {
-  color: variables.$color-primary;
-}
-
 .form__row--full {
   grid-column: 1 / -1;
 }
-
-/* ===========================
-* Special feature section
-============================== */
-
 
 /* ===========================
 * Special feature section
@@ -199,13 +146,15 @@ input::placeholder {
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  background-image: url('../../assets//images/home/event-bg.png');
+  background-image: url('../../assets/images/events/image-2.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
   
   &__content {
+    padding: 2.5rem;
+    background-color: variables.$color-accent-dark;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -223,19 +172,58 @@ input::placeholder {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.25rem;
+  }
+
+  &__kicker {
+    font-family: variables.$heading-font;
+    font-size: variables.$font-size-kicker;
   }
   
   &__title {
+    margin-top: -1rem;
     font-family: inherit;
     font-size: variables.$font-size-subheading;
     color: inherit;
   }
   
   &__text {
-    max-width: 750px;
+    max-width: 860px;
     font-size: variables.$font-size-body-xl;
     font-weight: 300;
     line-height: 1.5;
   }
 }
+
+/* ===========================
+* Gallery
+============================== */
+.eventGallery {
+  
+  &__showcase {
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: auto;
+    // grid-template-areas: 
+    //   "img1 img2 img2 img3"; // Define areas for each image
+    display: flex;
+    gap: 1rem;
+  }
+
+}
+
+// .eventGallery__img {
+
+//   &:nth-of-type(1) {
+//     grid-area: img1;
+//   }
+
+//   &:nth-of-type(2) {
+//     grid-area: img2;
+//   }
+
+//   &:nth-of-type(3) {
+//     grid-area: img3;
+//   }
+// }
+

@@ -21,6 +21,25 @@ a {
   }
 }
 
+input {
+  &::placeholder {
+    color: $color-primary;
+    opacity: 0.8;
+  }
+}
+
+input[type="date"] {
+  opacity: 0.8;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 24px;
+  height: 24px;
+  color-scheme: dark;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
 img {
   width: inherit;
   height: inherit;
@@ -49,12 +68,14 @@ img {
 // Single line
 .separator {
   width: 60%;
-  border: 2px solid $color-secondary;
+  border: 1px solid $color-secondary;
+  border-color: inherit;
 }
 
 .separator--sm {
   width: 35%;
-  border: 2px solid $color-secondary;
+  border: 1px solid $color-secondary;
+  border-color: inherit;
 }
 
 .lineVertical {
@@ -67,7 +88,7 @@ img {
 .lineHorizontal {
   width: 100%;
   // height: inherit;
-  border: 2px solid $color-secondary;
+  border: 1px solid $color-secondary;
   background-color: $color-secondary;
   opacity: 0.8;
 }
@@ -115,3 +136,14 @@ img {
   background: $color-overlay-bg-dark;
   z-index: 1;
 }
+
+.overlay--light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $color-overlay-bg-light;
+  z-index: 1;
+}
+
