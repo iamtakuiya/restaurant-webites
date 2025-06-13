@@ -17,6 +17,7 @@ const DynamicForm = <T extends Record<string, string>>({
   fieldItemClassName, // NEW: Receive field item class
   labelClassName,     // NEW: Receive label class
   inputClassName,     // NEW: Receive input class
+  buttonWrapperRowClass,
 }: FormFieldTypes<T>) => {
   // Manage form data with state
   const [formData, setFormData] = useState(() => {
@@ -64,7 +65,7 @@ const DynamicForm = <T extends Record<string, string>>({
       ))}
       {/* Submit Button */}
       {/* multiple classes */}
-      <div className={`${fieldItemClassName} ${className ? `${className}__button-wrapper` : ''}`}> 
+      <div className={`${fieldItemClassName || ''} ${buttonWrapperRowClass || ''}`}> 
         <Button variant='primary' cta={buttonText} />
       </div>
     </form>

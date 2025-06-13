@@ -38,7 +38,9 @@ const Header: React.FC= () => (
         </ul>
       </nav>
       <div className="btnContainer">
-        <Button variant='reserve' cta='Reserve' />
+        <Link to="/reserve">
+          <Button variant='reserve' cta='Reserve' />
+        </Link>
       </div>
     </header>
   </>

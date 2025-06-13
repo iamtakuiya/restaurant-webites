@@ -7,6 +7,7 @@ import HoursAndLocation from './pages/HoursAndLocationPage'
 import MenuPage from './pages/MenuPage';
 import AboutUs from './pages/AboutUsPage';
 import EventsPage from './pages/EventsPage';
+import ReservationPage from './pages/ReservationPage';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="menus" element={<MenuPage />} />
           <Route path="aboutUs" element={<AboutUs />} />
           <Route path="events" element={<EventsPage />} />
+          <Route path="reserve" element={<ReservationPage />} />
         </Routes>
       </MainLayout>
     </Router>

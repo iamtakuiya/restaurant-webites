@@ -20,6 +20,7 @@ interface ReservationFormProps {
   inputClassName?: string;
   buttonText?: string;
   formRowFullClassName?: string; // NEW: Prop to receive the 'form__row--full' class
+  buttonWrapperRowClass?: string;
 }
 
 // reservationFields will now be a function that takes formRowFullClassName
@@ -39,6 +40,7 @@ const ReservationForm: React.FC<ReservationFormProps> = ({
   inputClassName,
   buttonText = 'Booking now!',
   formRowFullClassName, // NEW: Destructure the new prop
+  buttonWrapperRowClass,
 }) => {
   const handleReservationSubmit = (data: ReservationFormData) => {
     console.log('Reservation data:', data);
@@ -56,6 +58,7 @@ const ReservationForm: React.FC<ReservationFormProps> = ({
       fieldItemClassName={fieldItemClassName}
       labelClassName={labelClassName}
       inputClassName={inputClassName}
+      buttonWrapperRowClass={buttonWrapperRowClass}
     />
   );
 };

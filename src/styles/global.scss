@@ -21,25 +21,36 @@ a {
   }
 }
 
+/* ===========================
+* Input Styles
+============================== */
 input {
   &::placeholder {
     color: $color-primary;
     opacity: 0.8;
   }
+
+  &[type="date"] {
+    &::-webkit-datetime-edit-year-field,
+    &::-webkit-datetime-edit-month-field,
+    &::-webkit-datetime-edit-day-field {
+      color: $color-primary;
+      opacity: 0.8;
+    }
+
+    &::-webkit-calendar-picker-indicator {
+      width: 24px;
+      height: 24px;
+      color-scheme: dark;
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
 }
 
-input[type="date"] {
-  opacity: 0.8;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
-  width: 24px;
-  height: 24px;
-  color-scheme: dark;
-  cursor: pointer;
-  opacity: 0.8;
-}
-
+/* ===========================
+* Image Styles
+============================== */
 img {
   width: inherit;
   height: inherit;

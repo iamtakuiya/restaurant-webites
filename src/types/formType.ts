@@ -32,6 +32,7 @@ export interface FormFieldTypes<T extends Record<string, string>> {
   fieldItemClassName?: string; // For fieldset
   labelClassName?: string; // For label
   inputClassName?: string; // For label
+  buttonWrapperRowClass?: string; // NEW: Specific class for the button's wrapper div (e.g., styles['form__row--full'])
 }
 
 export interface SingleFormFieldProps extends FieldConfig {

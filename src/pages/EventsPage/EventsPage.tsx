@@ -1,15 +1,15 @@
 import React from 'react';
 
 // Components
-import Button from '../../components/Common/Button';
+import EventBanner from '../../components/Sections/EventBanner';
+import { EventBlock } from '../../components/Common/Block';
+import ReservationForm from '../../components/Common/Form/ReservationForm';
 import Image from '../../components/Common/Image';
 
 // Images
 import Image3 from '../../assets/images/events/image-3.png';
 import Image4 from '../../assets/images/events/image-4.png';
 import Image5 from '../../assets/images/events/image-5.png';
-
-
 
 // Gallery component
 const Gallery = ({ images }: { images: string[] }) => {
@@ -29,9 +29,7 @@ const Gallery = ({ images }: { images: string[] }) => {
 
 // Style
 import styles from './EventsPage.module.scss';
-import EventBanner from '../../components/Sections/EventBanner';
-import { EventBlock } from '../../components/Common/Block';
-import ReservationForm from '../../components/Common/Form/ReservationForm';
+
 
 const EventsPage: React.FC = () => {
   return (
@@ -63,7 +61,8 @@ const EventsPage: React.FC = () => {
               fieldItemClassName={styles.form__fieldItem} // Applies to each <fieldset>
               labelClassName={styles.form__label}           // Applies to each <label>
               inputClassName={styles.form__input}           // Applies to each <input>
-              formRowFullClassName={styles['form__row--full']} // NEW: Pass this specific class
+              formRowFullClassName={styles['form__row--full']} // For specific fields
+              buttonWrapperRowClass={styles['form__row--full']} // NEW: For the button wrapper
               buttonText="Booking now!" // Pass the button text
             />
             {/* <form className={styles.form} action="/" method="POST">
