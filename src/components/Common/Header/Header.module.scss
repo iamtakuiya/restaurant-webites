@@ -1,5 +1,5 @@
 @use 'sass:color';
-@use '../../../styles/_variables.scss';
+@use '../../../styles/_variables.scss' as * ;
 
 /* ===========================
 * Header
@@ -13,8 +13,8 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  background-color: variables.$color-primary;
-  border-bottom: 1px solid variables.$color-secondary;
+  background-color: $color-primary;
+  border-bottom: 1px solid $color-secondary;
 }
 
 .logoContainer {
@@ -24,7 +24,6 @@
 .navbar {
 
   &__item {
-
   }
 
   &__link {
@@ -32,9 +31,64 @@
     font-weight: 600;
 
     &:hover {
-      color: variables.$color-accent;
-      border-color: variables.$color-accent-light;
+      color: $color-accent;
+      border-color: $color-accent-light;
     }
   }
-
+  
+  &__icon {
+    width: 32px;
+    height: 32px;
+    padding: 1rem;
+    cursor: pointer;
+    display: none;
+  }
 }
+
+/* ===========================
+* Mobile screen
+============================== */
+@media (min-width: $breakpoint-laptop) {
+  
+}
+
+@media (max-width: 960px) {
+
+
+  .navbar {
+    // display: none;
+
+    &__linkMobile {
+      margin: 72px 0;
+      padding: 74px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: $color-primary;
+    }
+
+    &__btnMobile {
+      display: none;
+    }
+
+    &__link {
+      font-size: $font-size-title-md;
+    }
+
+
+    &__icon {
+      display: block;
+    }
+  }
+}
+// $breakpoint-large-screen: 1980px;
+// $breakpoint-desktop: 1440px;
+// $breakpoint-laptop: 1024px;
+// $breakpoint-tablet: 768px;
+// $breakpoint-landscape: 767px;
+// $breakpoint-portrait: 360px;

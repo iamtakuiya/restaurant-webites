@@ -1,19 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 // Component
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Button from '../Button';
 
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/images/logos/logo.png';
 import styles from './Header.module.scss';
 
-const Header: React.FC= () => (
-  <>
+const Header: React.FC= () => {
+  const [showButton, setShowButton] = useState(true); // Initial state
+
+  return (
     <header className={styles.header}>
       <div className={styles.logoContainer}>
         <img src={logo} alt="LaidBack logo" />
       </div>
       <nav className={styles.navbar}>
-        <ul className="linkContainer">
+        <ul className={`linkContainer ${styles.navbar__linkMobile}`}>
           {/* Use Link for client-side navigation */}
           <li className={styles.navbar__item}>
             <Link className={styles.navbar__link} to="/">Home</Link>
@@ -30,20 +34,22 @@ const Header: React.FC= () => (
           <li className={styles.navbar__item}>
             <Link className={styles.navbar__link} to="/events">Events Info</Link>
           </li>
-          {/* <li className={styles.navbar__item}><a className={styles.navbar__link} href="/">Home</a></li>
-          <li className={styles.navbar__item}><a className={styles.navbar__link} href="/hoursAndLocation">Hours & Location</a></li> */}
-          {/* <li className={styles.navbar__item}><a className={styles.navbar__link} href="/menus">Menus</a></li> */}
-          {/* <li className={styles.navbar__item}><a className={styles.navbar__link} href="/aboutUs">About Us</a></li> */}
-          {/* <li className={styles.navbar__item}><a className={styles.navbar__link} href="/event">Events Info</a></li> */}
         </ul>
       </nav>
-      <div className="btnContainer">
+      <div className={`btnContainer ${styles.navbar__btnMobile}`}>
         <Link to="/reserve">
-          <Button variant='reserve' cta='Reserve' />
+          <Button 
+            variant='reserve' 
+            cta='Reserve' 
+          />
         </Link>
       </div>
+      <FontAwesomeIcon
+        className={styles.navbar__icon}
+        icon={faBars} 
+      />
     </header>
-  </>
-);
+  );
+};
 
 export default Header;

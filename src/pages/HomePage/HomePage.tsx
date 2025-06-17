@@ -1,21 +1,19 @@
 import React from 'react';
 
 // Component
-import Button from '../../components/Common/Button';
 import { MenuCard } from '../../components/Sections/Menu';
-import Image from '../../components/Common/Image';
+import HomeAboutUs from '../../components/Sections/HomeAboutUs';
+
 
 // Sections
 import HeroSection from '../../components/Sections/Hero';
 import ExperienceSection from '../../components/Sections/Experience/Experience';
-import GallerySection from '../../components/Sections/Gallery';
+import ExploreMoreSection from '../../components/Sections/ExploreMore';
+import HomeEvent from '../../components/Sections/HomeEvent';
 // Data
 import { homeMenuItems } from '../../assets/data/menuitems.d';
 // Style
 import styles from './HomePage.module.scss';
-
-import aboutusImageLeft from '../../assets/images/home/about-us-left.png';
-import aboutusImageRight from '../../assets/images/home/about-us-right.png';
 
 const HomePage: React.FC = () => {
   return (
@@ -29,63 +27,14 @@ const HomePage: React.FC = () => {
         {/* Experience Section */}
         <ExperienceSection />
         {/* Explore Gallery Section */}
-        <GallerySection />
+        <ExploreMoreSection />
         {/* About Us */}
-        <AboutUsSection />
+        <HomeAboutUs />
         {/* Event Section */}
-        <Event />
+        <HomeEvent />
       </div>
     </>
   );
 };
-
-// Homepage's Sections
-// Home Page's AboputUsSecion
-const AboutUsSection: React.FC = () => (
-  <section className={styles.aboutus}>
-    <header className={styles.aboutus__header}>
-      <h2 className={styles.aboutus__title}>About us</h2>
-    </header>
-    <div className={styles.aboutus__content}>
-      <Image
-        className={styles.aboutus__imgContainer}
-        src={aboutusImageLeft}
-        alt='explore Image'
-      />
-      <div className={styles.aboutus__card}>
-        <div className={styles.aboutus__details}>
-          <div className={styles.aboutus__description}>
-            <p className={styles.aboutus__kicker}>Special features</p>
-            <h3 className={styles.aboutus__heading}>Traditional<br />& Modern</h3>
-            <p className={styles.aboutus__text}>They offer a mix of pasta, sandwiches, and salads, catering to different preferences.</p>
-          </div>
-          <div className="btnContainer">
-            <Button variant='primary' cta='See more' />
-          </div>
-        </div>
-      </div>
-      <Image
-        className={styles.aboutus__imgContainer}
-        src={aboutusImageRight}
-        alt='explore Image'
-      />
-    </div>
-  </section>
-);
-
-const Event: React.FC = () => (
-  <section className={styles.event}>
-    <div className="overlay--dark"></div>
-    <div className={styles.event__content}>
-      <div className={styles.event__description}>
-        <h2 className={styles.event__title}>Catering & Events<br />Authentic Italian Feasts</h2>
-        <p className={styles.event__text}>Create a sophisticated and memorable event with our authentic Italian catering. We offer customized menus featuring handcrafted pasta, flavorful sauces, and exquisite desserts, ensuring a dining experience.</p>
-      </div>
-      <div className="btnContainer">
-        <Button variant='primary' cta="Let's Plan" />
-      </div>
-    </div>
-  </section>
-);
 
 export default HomePage;

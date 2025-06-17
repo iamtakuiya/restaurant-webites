@@ -38,7 +38,6 @@ $color-overlay-bg-light: linear-gradient(
 // Shadow
 $color-shadow: 15px 13px 0 -5px hsla(35, 54%, 67%, 0.5);
 
-
 /* ===========================
 * Typeface
 ============================== */
@@ -70,7 +69,7 @@ $section-page-padding-sm: 40px 60px;
 ============================== */
 $breakpoint-large-screen: 1980px;
 $breakpoint-desktop: 1440px;
-$breakpoint-laptop: 960px;
-$breakpoint-tablet: 991px;
+$breakpoint-laptop: 1024px;
+$breakpoint-tablet: 768px;
 $breakpoint-landscape: 767px;
 $breakpoint-portrait: 360px;

@@ -1,9 +1,9 @@
 @use 'sass:color';
-@use '../../../styles/_variables.scss';
+@use '../../../styles/_variables.scss' as *;
 
 .btn {
   font-weight: 700;
-  font-size: variables.$font-size-body-lg;
+  font-size: $font-size-body-lg;
   padding: 12px 24px;  
   cursor: pointer;
   outline: none;
@@ -13,50 +13,50 @@
   white-space: nowrap;
   
   &--primary {
-    background: variables.$color-accent-light;
-    color: variables.$color-secondary;
-    border-color: variables.$color-accent-light;
+    background: $color-accent-light;
+    color: $color-secondary;
+    border-color: $color-accent-light;
 
     &:hover {
-      background: color.adjust(variables.$color-accent-light,$lightness: 5%);
-      color: variables.$color-secondary;
-      border-color: color.adjust(variables.$color-accent-light, $lightness: 5%);
+      background: color.adjust($color-accent-light,$lightness: 5%);
+      color: $color-secondary;
+      border-color: color.adjust($color-accent-light, $lightness: 5%);
     }
   }
 
   &--secondary {
     background: transparent;
-    color: variables.$color-primary;
-    border-color: variables.$color-primary;
+    color: $color-primary;
+    border-color: $color-primary;
 
     &:hover {
-      background: variables.$color-accent-light;
-      color: variables.$color-secondary;
-      border-color: variables.$color-accent-light;
+      background: $color-accent-light;
+      color: $color-secondary;
+      border-color: $color-accent-light;
     }
   }
 
   &--reserve {
-    background: variables.$color-secondary;
-    color: variables.$color-primary;
-    border-color: variables.$color-secondary;
+    background: $color-secondary;
+    color: $color-primary;
+    border-color: $color-secondary;
 
     &:hover {
-      background: variables.$color-accent-light;
-      color: variables.$color-secondary;
-      border-color: variables.$color-accent-light;
+      background: $color-accent-light;
+      color: $color-secondary;
+      border-color: $color-accent-light;
     }
   }
 
   &--signup {
-    background: variables.$color-primary;
-    color: variables.$color-secondary;
-    border-color: variables.$color-secondary;
+    background: $color-primary;
+    color: $color-secondary;
+    border-color: $color-secondary;
 
     &:hover {
-      background: variables.$color-accent-light;
-      color: variables.$color-secondary;
-      border-color: variables.$color-accent-light;
+      background: $color-accent-light;
+      color: $color-secondary;
+      border-color: $color-accent-light;
     }
   }
 }

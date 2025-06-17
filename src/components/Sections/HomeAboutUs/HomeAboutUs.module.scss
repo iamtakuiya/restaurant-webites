@@ -1,0 +1,82 @@
+@use 'sass:color';
+@use '../../../styles/_variables.scss';
+
+/* ===========================
+* About Us
+============================== */
+.aboutus {
+  padding: variables.$section-page-padding;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  font-family: variables.$body-font;
+  
+  &__header {
+  
+  }
+  
+  &__title {
+    font-size: variables.$font-size-heading;
+  }
+  
+  &__content {
+    max-height: 477px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+  }
+  
+  &__imgContainer {
+    max-height: 477px;
+
+    img {
+      height: 477px;
+      width: 424px;
+    }
+  }
+  
+  &__card {
+    background-color: variables.$color-black-dark;
+    color: variables.$color-primary;
+    padding: 60px;
+  }
+
+  &__details {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  &__description {
+    width: 298px;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  &__kicker {
+    font-family: variables.$heading-font;
+    font-size: variables.$font-size-kicker;
+    line-height: 150%;
+  }
+  
+  &__heading {
+    font-family: inherit;
+    font-size: variables.$font-size-heading;
+    line-height: 120%;
+    color: inherit;
+  }
+  
+  &__text {
+    color: inherit;
+    font-weight: 200;
+  }
+}

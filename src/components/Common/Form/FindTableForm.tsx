@@ -9,23 +9,48 @@ interface FindTableFormData {
   [key: string]: string;
 };
 
-const findTableFields: FieldConfig[] = [
-  { label: 'Number of people', name: 'people', type: 'number', placeholder: 'Number of people' },
-  { label: 'Date', name: 'date', type: 'date', placeholder: 'Date' },
-  { label: 'Time', name: 'date', type: 'time', placeholder: 'Time' },
+interface FindTableFormProps {
+  className?: string;
+  fieldItemClassName?: string;
+  labelClassName?: string;
+  inputClassName?: string;
+  buttonText?: string;
+  formRowFullClassName?: string; // NEW: Prop to receive the 'form__row--full' class
+  buttonWrapperRowClass?: string;
+}
+
+const getFindTableFields = (formRowFullClassName?: string): FieldConfig[] => [
+  { label: 'Number of people', name: 'people', type: 'number', placeholder: 'Number of people', rowClass: formRowFullClassName },
+  { label: 'Date', name: 'date', type: 'date', placeholder: 'Date', rowClass: formRowFullClassName },
+  { label: 'Time', name: 'date', type: 'time', placeholder: 'Time', rowClass: formRowFullClassName },
 ];
 
-const FindTableForm: React.FC = () => {
+const FindTableForm: React.FC<FindTableFormProps> = ({
+  className,
+  fieldItemClassName,
+  labelClassName,
+  inputClassName,
+  buttonText = 'Find A Table',
+  formRowFullClassName, // NEW: Destructure the new prop
+  buttonWrapperRowClass,
+}) => {
+  const findTableFields = getFindTableFields(formRowFullClassName);
+
   const handleFindTableSubmit = (data: FindTableFormData) => {
     console.log('Find table data:', data);
   };
 
   return (
-    <DynamicForm<FindTableFormData> 
-      fields={findTableFields}
-      onSubmit={handleFindTableSubmit}
-      buttonText='Find a table'
-    />
+    <DynamicForm<FindTableFormData>
+    fields={findTableFields} // Use the dynamically created fields
+    onSubmit={handleFindTableSubmit}
+    buttonText={buttonText}
+    className={className}
+    fieldItemClassName={fieldItemClassName}
+    labelClassName={labelClassName}
+    inputClassName={inputClassName}
+    buttonWrapperRowClass={buttonWrapperRowClass}
+  />
   );
 };
 

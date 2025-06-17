@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Components
-import ReservationForm from '../../components/Common/Form/ReservationForm';
+import FindTableForm from '../../components/Common/Form/FindTableForm';
 
 // Style
 import styles from './ReservationPage.module.scss';
@@ -20,7 +20,7 @@ const ReservationPage: React.FC = () => {
           </header>
           {/* Reservation Form */}
           <div className={styles.formContainer}>
-            <ReservationForm
+            <FindTableForm
               className={styles.form}                      // Applies to the <form> element
               fieldItemClassName={styles.form__fieldItem} // Applies to each <fieldset>
               labelClassName={styles.form__label}           // Applies to each <label>
