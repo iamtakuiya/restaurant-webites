@@ -1,5 +1,5 @@
 @use 'sass:color';
-@use '../../../styles/_variables.scss';
+@use '../../../styles/variables' as * ;
 
 /* ===========================
 * Hero
@@ -7,7 +7,7 @@
 .hero {
   width: 100%;
   max-height: 962px;
-  height: 87vh;
+  min-height: 87vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,6 +17,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  // overflow: hidden;
   
   position: relative;
 
@@ -31,7 +32,7 @@
   //   z-index: 1;
   // }
 
-  &__heroContent {
+  &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,9 +42,9 @@
   }
 
   &__textContainer {
-    width: 843px;
+    max-width: 843px;
     max-height: 323px;
-    color: variables.$color-primary;
+    color: $color-primary;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -52,14 +53,89 @@
 
   &__heading {
     line-height: 120%;
-    font-size: variables.$font-size-heading;
+    font-size: $font-size-heading;
     color: inherit;
   }
   
   &__text {
-    font-size: variables.$font-size-body-xl;
+    font-size: $font-size-body-xl;
     font-weight: 400;
     line-height: 1.5;
     color: inherit;
   }
 }
+
+
+/* ===========================
+* Responsive style
+============================== */
+@media (max-width: $breakpoint-mobile-portrait-xl) {
+  .hero {
+    &__text {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile-portrait-lg) {
+  .hero {
+    padding: $section-page-padding-tablet;
+
+    &__content {
+      gap: 4rem;
+    }
+
+    &__heading {
+      font-size: $font-size-subheading;
+    }
+
+    &__text {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile-portrait-md) {
+  .hero {
+    
+    &__content {
+      gap: 3rem;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile-portrait-sm) {
+  .hero {
+
+    &__btnContainer {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+}
+
+// Portrait
+@media (orientation: portrait) and (max-width: $breakpoint-mobile-landscape) {
+
+}
+
+
+// Landscape
+@media (orientation: landscape) and (max-width: $breakpoint-mobile-landscape) {
+
+}
+
+
+/* ===========================
+* Breakpoint
+============================== */
+// $breakpoint-large-screen: 1980px;
+// $breakpoint-desktop: 1440px;
+// $breakpoint-laptop: 1024px;
+// $breakpoint-tablet-lg: 991px;
+// $breakpoint-tablet-sm: 768px;
+// $breakpoint-mobile-landscape: 767px;
+// $breakpoint-mobile-portrait-lg: 425px;
+// $breakpoint-mobile-portrait-md: 375px;
+// $breakpoint-mobile-portrait-md: 360px;
+// $breakpoint-mobile-portrait-sm: 320px;

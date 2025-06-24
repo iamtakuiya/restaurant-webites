@@ -44,25 +44,26 @@ $color-shadow: 15px 13px 0 -5px hsla(35, 54%, 67%, 0.5);
 $heading-font: 'Playball', cursive;
 $body-font: 'Roboto', sans-serif;
 
-// Font Sizes
-$font-size-heading: 64px;
-$font-size-subheading: 48px;
-$font-size-title-lg: 36px;
-$font-size-title-md: 32px;
-$font-size-title-sm: 24px;
-$font-size-kicker: 24px;
-$font-size-quote: 20px;
-$font-size-body-xl: 21px;
-$font-size-body-lg: 18px;
-$font-size-body-md: 16px;
-$font-size-body-sm: 14px;
-$font-size-body-xs: 11px;
+/* Font sizes converted to rems */
+$font-size-heading: 4rem;        // 64px / 16 = 4rem
+$font-size-subheading: 3rem;     // 48px / 16 = 3rem
+$font-size-title-lg: 2.25rem;    // 36px / 16 = 2.25rem
+$font-size-title-md: 2rem;       // 32px / 16 = 2rem
+$font-size-title-sm: 1.5rem;     // 24px / 16 = 1.5rem
+$font-size-kicker: 1.5rem;       // 24px / 16 = 1.5rem
+$font-size-quote: 1.25rem;       // 20px / 16 = 1.25rem
+$font-size-body-xl: 1.3125rem;   // 21px / 16 ≈ 1.3125rem
+$font-size-body-lg: 1.125rem;    // 18px / 16 = 1.125rem
+$font-size-body-md: 1rem;        // 16px / 16 = 1rem
+$font-size-body-sm: 0.875rem;    // 14px / 16 = 0.875rem
+$font-size-body-xs: 0.6875rem;   // 11px / 16 ≈ 0.6875rem
 
 /* ===========================
 * Box style
 ============================== */
 $section-page-padding: 112px 60px;
 $section-page-padding-sm: 40px 60px;
+$section-page-padding-tablet: 2rem 1rem;
 
 /* ===========================
 * Breakpoint
@@ -70,6 +71,12 @@ $section-page-padding-sm: 40px 60px;
 $breakpoint-large-screen: 1980px;
 $breakpoint-desktop: 1440px;
 $breakpoint-laptop: 1024px;
-$breakpoint-tablet: 768px;
-$breakpoint-landscape: 767px;
-$breakpoint-portrait: 360px;
+$breakpoint-tablet-lg: 991px;
+$breakpoint-tablet-md: 860px;
+$breakpoint-tablet-sm: 768px;
+$breakpoint-mobile-landscape: 767px;
+$breakpoint-mobile-portrait-xl: 468px;
+$breakpoint-mobile-portrait-lg: 425px;
+$breakpoint-mobile-portrait-md: 375px;
+$breakpoint-mobile-portrait-sm: 360px;
+$breakpoint-mobile-portrait-xs: 320px;

@@ -1,5 +1,5 @@
 @use 'sass:color';
-@use '../../../styles/variables';
+@use '../../../styles/_variables.scss' as *;
 
 /* ===========================
 * EventBanner
@@ -21,15 +21,15 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    box-shadow: variables.$color-shadow;
+    box-shadow: $color-shadow;
   }
   
   &__content {
     padding: 75.5px 26px;
     max-width: 363px;
     max-height: 420px;
-    background-color: variables.$color-primary;
-    border: 3px solid variables.$color-accent-transparent;
+    background-color: $color-primary;
+    border: 3px solid $color-accent-transparent;
     position: absolute;
     top: 0;
     right: 0;
@@ -41,15 +41,22 @@
   }
   
   &__heading {
-    color: variables.$color-accent;
-    font-size: variables.$font-size-title-lg;
-    -webkit-text-stroke: 0.1px variables.$color-accent-dark;
-    // stroke: 0.1px variables.$color-accent;
+    color: $color-accent;
+    font-size: $font-size-title-lg;
+    -webkit-text-stroke: 0.1px $color-accent-dark;
+    // stroke: 0.1px $color-accent;
   }
   
   &__description {
-    font-size: variables.$font-size-body-md;
+    font-size: $font-size-body-md;
     font-weight: 400;
     line-height: 24px;
   }
+}
+
+/* ===========================
+* Responsive
+============================== */
+@media (max-width: $breakpoint-tablet-lg) {
+
 }

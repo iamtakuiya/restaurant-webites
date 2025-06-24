@@ -4,6 +4,8 @@ import Image from "../../Common/Image";
 import styles from './Experience.module.scss';
 import expImage from '../../../assets/images/home/experience.png';
 
+import { experienceMenuItems } from '../../../assets/data/experienceitems.d';
+
 const ExperienceSection: React.FC = () => (
   <section className={styles.experience}>
     <div className={styles.experience__details}>
@@ -11,35 +13,22 @@ const ExperienceSection: React.FC = () => (
         <h2 className={styles.experience__title}>Experience<br />Fresh Ingredients</h2>
       </header>
       <div className={styles.experience__menus}>
-        <div className={styles.experience__menu}>
-          <h3 className={styles.experience__name}>Classic Margherita Pizza</h3>
-          <div className={styles.experience__description}>
-            <p className={styles.experience__body}>Fresh mozzarella, vibrant tomato sauce, and fragrant basil on our hand-tossed crust</p>
-            <span className={styles.experience__price}>$14</span>
-          </div>
-        </div>
-        <div className={styles.experience__menu}>
-          <h3 className={styles.experience__name}>Classic Margherita Pizza</h3>
-          <div className={styles.experience__description}>
-            <p className={styles.experience__body}>Fresh mozzarella, vibrant tomato sauce, and fragrant basil on our hand-tossed crust</p>
-            <span className={styles.experience__price}>$14</span>
-          </div>
-        </div>
-        <div className={styles.experience__menu}>
-          <h3 className={styles.experience__name}>Classic Margherita Pizza</h3>
-          <div className={styles.experience__description}>
-            <p className={styles.experience__body}>Fresh mozzarella, vibrant tomato sauce, and fragrant basil on our hand-tossed crust</p>
-            <span className={styles.experience__price}>$14</span>
-          </div>
-        </div>
-        <div className="lineHorizontal"></div>
-        <div className={styles.experience__menu}>
-          <h3 className={styles.experience__name}>Classic Margherita Pizza</h3>
-          <div className={styles.experience__description}>
-            <p className={styles.experience__body}>Fresh mozzarella, vibrant tomato sauce, and fragrant basil on our hand-tossed crust</p>
-            <span className={styles.experience__price}>$14</span>
-          </div>
-        </div>
+        {experienceMenuItems.map((item, index) => {
+          const isLastItem = index === experienceMenuItems.length - 1; // Determine last item here
+          return (
+            <React.Fragment key={item.id}>
+              {/* Show the line only if the last item */}
+              {isLastItem &&  <div className="lineHorizontal"></div>}
+              <div key={item.id} className={styles.experience__menu}>
+                <h3 className={styles.experience__name}>{item.title}</h3>
+                <div className={styles.experience__description}>
+                  <p className={styles.experience__body}>{item.description}</p>
+                  <span className={styles.experience__price}>{item.price}</span>
+                </div>
+              </div>
+            </React.Fragment>
+          )
+        })}
       </div>
     </div>
     {/* Image */}

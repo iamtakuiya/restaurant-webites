@@ -11,7 +11,7 @@ const HoursAndLocation: React.FC = () => {
         {/* <div className={styles.logoContainer}>
           <img src={logoLarge} alt="LaidBack logo" />
         </div> */}
-        <div className={styles.hoursAndLocation__text}>
+        <div className={styles.hoursAndLocation__description}>
           <div className={styles.hoursAndLocation__titleContainer}>
             <h1 className={styles.hoursAndLocation__title}>HOURS &<br />LOCATION</h1>
           </div>

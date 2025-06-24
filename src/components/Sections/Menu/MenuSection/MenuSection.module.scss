@@ -1,11 +1,11 @@
 @use 'sass:color';
-@use '../../../../styles/variables';
+@use '../../../../styles/variables' as *;
 
 /* ===========================
 * MenuSection
 ============================== */
 .menu {
-  padding: variables.$section-page-padding;
+  padding: $section-page-padding;
   max-width: 1450px;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@
   }
 
   &__heading {
-    font-size: variables.$font-size-heading;
+    font-size: $font-size-heading;
     text-transform: uppercase;
   }
   
@@ -46,12 +46,57 @@
 
   &__title {
     line-height: 120%;
-    font-size: variables.$font-size-heading;
+    font-size: $font-size-heading;
     font-weight: 400;
     color: inherit;
   }
 
   &__img {
     // width: 100%;
+  }
+}
+
+
+/* ===========================
+* Responsive
+============================== */
+@media (max-width: $breakpoint-tablet-lg) {
+  .menu {
+    padding: $section-page-padding-tablet;
+
+    &__heading {
+      font-size: $font-size-subheading;
+    }
+
+    &__menusContainer {
+      padding: 30px 0;
+    }
+
+    &__title {
+      font-size: $font-size-subheading;
+    }
+
+    &__menus {
+      padding: unset;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile-portrait-xl) {
+  .menu {
+
+    &__menusContainer {
+      padding: 0;
+      gap: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile-portrait-lg) {
+  .menu {
+
+    &__menus {
+      flex-direction: column;
+    }
   }
 }

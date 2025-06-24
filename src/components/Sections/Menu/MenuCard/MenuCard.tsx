@@ -10,7 +10,8 @@ import MenuHeading from '../MenuHeading'; // Assuming you have this component
 // import { homeMenuItems } from './data/menuitems';
 import { reviewItemData } from '../../../../assets/data/revieweritems.d'; // Import the *single* general review
 // Styles
-import styles from '../styles.module.scss';
+import styles from '../Menu.module.scss';
+// type
 import type { MenuItemData } from '../../../../types/menuType';
 
 interface MenuCardProps {
@@ -23,9 +24,6 @@ const MenuCard: React.FC<MenuCardProps> = ({ menuItems }) => { // Renamed from M
     <section className={styles.topMenu}>
       <MenuHeading />
       <div className={styles.topMenuContainer}>
-        {/* <MenuCardItem item={homeMenuItems[0]} />
-        <MenuCardItem item={homeMenuItems[1]} />
-        <FullMenuCard item={homeMenuItems[2]} review={reviewItemData}/> */}
         {menuItems.map((item) => {
           if (item.isFull) {
             return (

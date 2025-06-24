@@ -1,6 +1,10 @@
 /* ===========================
 * Base styles
 ============================== */
+html {
+  font-size: 16px; // 1rem = 16px
+}
+
 body {
   font-family: $body-font;
   color: $color-secondary;
@@ -158,3 +162,13 @@ img {
   z-index: 1;
 }
 
+/* ===========================
+* Visibility Styles
+============================== */
+.open {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}

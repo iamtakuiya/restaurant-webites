@@ -3,7 +3,7 @@ import React from "react";
 // Fontawesome icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import styles from './styles.module.scss';
+import styles from './Menu.module.scss';
 
 const MenuHeading: React.FC = () => (
   <header className={styles.topMenu__header}>

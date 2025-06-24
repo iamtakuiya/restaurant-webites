@@ -2,6 +2,7 @@
 @use '../../../styles/_variables.scss' as *;
 
 .btn {
+  width: 100%;
   font-weight: 700;
   font-size: $font-size-body-lg;
   padding: 12px 24px;  

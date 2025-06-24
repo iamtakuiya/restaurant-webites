@@ -2,7 +2,7 @@ import React from 'react';
 import Image from '../../../Common/Image/Image'; // Adjust path if needed
 import ReviewSection from '../ReviewSection'; // Import the ReviewSection component
 import type { MenuItemData, ReviewData } from '../../../../types/menuType';
-import styles from '../styles.module.scss';
+import styles from '../Menu.module.scss';
 
 interface FullMenuCardProps {
   item: MenuItemData;

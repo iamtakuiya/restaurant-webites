@@ -12,7 +12,7 @@ const Footer: React.FC = () => (
     {/* Horizontal line */}
     <div className="lineHorizontal--thin"></div>
     {/* Top Section */}
-    <section className={styles.footer_sectionTop}>
+    <section className={styles.footer__sectionTop}>
       <div className={styles.sitemapContainer}>
         <nav className={styles.sitemap}>
           <ul className={`${styles.sitemap__list}`}>
@@ -55,7 +55,7 @@ const Footer: React.FC = () => (
     {/* Horizontal line */}
     <div className="lineHorizontal--thin"></div>
     {/* Bottom section */}
-    <section className={styles.footer_sectionBottom}>
+    <section className={styles.footer__sectionBottom}>
       <div className={styles.footer__copyright}>
         <p className={styles.footer__text}>&copy; 2024 LaidBack Eats. All rights reserved.</p>
       </div>

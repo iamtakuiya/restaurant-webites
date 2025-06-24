@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Image from '../../Common/Image/Image'; // Adjust path if needed
 import type { ReviewData } from '../../../types/menuType';
-import styles from './styles.module.scss';
+import styles from './Menu.module.scss';
 
 interface ReviewSectionProps {
   review: ReviewData;
@@ -23,6 +23,7 @@ const ReviewSection: React.FC<ReviewSectionProps> = ({ review }) => (
     <blockquote className={styles.review__blockquote}>
       <p className={styles.review__quote}>{review.quote}</p>
       <div className={styles.review__reviewer}>
+        {/* Avatar */}
         <div className={styles.review__reviewerContainer}>
           <Image
             className={styles.review__avatar}
@@ -35,6 +36,7 @@ const ReviewSection: React.FC<ReviewSectionProps> = ({ review }) => (
           </div>
         </div>
         <div className="lineVertical"></div>
+        {/* Brand logo */}
         <div className={styles.review__brandContainer}>
           <Image
             className={styles.review__brand}
