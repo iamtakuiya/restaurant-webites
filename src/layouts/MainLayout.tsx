@@ -1,5 +1,3 @@
-import React, { ReactNode } from 'react';
-
 // Main layout
 import Header from '../components/Common/Header';
 import Footer from '../components/Common/Footer';

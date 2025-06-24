@@ -35,7 +35,7 @@ const Header: React.FC= () => {
       }
     };
 
-    let timeoutId: NodeJs.Timeout;
+    let timeoutId: ReturnType<typeof setTimeout>;
     if (isMenuOpen) {
       timeoutId = setTimeout(() => {
         // Add event listener when the component mounts or isMenuOpen changes

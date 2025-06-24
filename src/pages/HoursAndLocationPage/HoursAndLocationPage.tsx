@@ -1,7 +1,6 @@
 import React from "react";
 
 // Image
-import logoLarge from '../../assets/images/logos/logo-lg.png';
 import styles from './HoursAndLocationPage.module.scss';
 
 const HoursAndLocation: React.FC = () => {
