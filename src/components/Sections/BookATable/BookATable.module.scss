@@ -1,5 +1,5 @@
 @use 'sass:color';
-@use '../../../styles/_variables.scss';
+@use '../../../styles/_variables.scss' as *;
 
 /* ===========================
 * Book a Table
@@ -8,13 +8,13 @@
   padding: 60px 64px;
   display: grid;
   place-content: center;
+  overflow: hidden;
   
   &__container {
     max-width: 910px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     gap: 2rem;
   }
 
@@ -31,11 +31,11 @@
 
   &__heading {
     width: 100%;
-    font-size: variables.$font-size-title-md; 
+    font-size: $font-size-title-md; 
   }
 
   &__description {
-    font-size: variables.$font-size-body-md;
+    font-size: $font-size-body-md;
     font-weight: 200;
   }
 }
@@ -44,25 +44,26 @@
   flex: 0.5;
   padding: 60px 48px;
   height: 480px;
+  max-width: 470px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
-  background-color: variables.$color-tertiary;
-  color: variables.$color-primary;
+  background-color: $color-tertiary;
+  color: $color-primary;
 
   &__content {
     text-align: center;
   }
 
   &__heading {
-    font-size: variables.$font-size-title-sm;
+    font-size: $font-size-title-sm;
     font-weight: 600;
   }
 
   &__text {
-    font-size: variables.$font-size-body-lg;
+    font-size: $font-size-body-lg;
     font-weight: 400;
     width: 250px;
   }
@@ -91,9 +92,9 @@
   &__input {
     height: 48px;
     padding: 0 6px;
-    outline: variables.$color-accent;
+    outline: $color-accent;
     border: none;
-    border-bottom: 1px solid variables.$color-accent;
+    border-bottom: 1px solid $color-accent;
     background-color: transparent;
     color: inherit;
   }
@@ -101,4 +102,62 @@
 
 .form__row--full {
   grid-column: 1 / -1;
+}
+
+/* ===========================
+* Responsive
+============================== */
+@media (max-width: $breakpoint-tablet-lg) {
+  .bookingForm {
+
+  }  
+}
+
+@media (max-width: $breakpoint-tablet-md) {
+  .bookingForm {
+    padding: $section-page-padding-tablet;
+    
+    &__container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__content {
+      flex: 1;
+      padding: 30px 60px;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .formContainer {
+    flex: 1;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-portrait-xl) {
+  .bookingForm {
+
+  }
+
+  .formContainer {
+    padding: 30px 60px;
+    height: 100%;
+    display: inline-block;
+
+    &__text {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: $breakpoint-mobile-portrait-xl) {
+
+  .formContainer {
+    // padding: 2rem;
+  }
 }

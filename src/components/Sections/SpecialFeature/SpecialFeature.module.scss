@@ -63,12 +63,35 @@
 /* ===========================
 * Responsive
 ============================== */
-// @media (max-width: $breakpoint-tablet-lg) {
-//   .specialFeature { 
-//     padding: $section-page-padding-tablet;
+@media (max-width: $breakpoint-tablet-lg) {
+  .specialFeature { 
+    // padding: $section-page-padding-tablet;
 
-//     &__title {
-//       font-size: $font-size-subheading;
-//     }
-//   }
-// }
+    &__title {
+      font-size: $font-size-title-lg;
+    }
+
+    &__text {
+      font-size: $font-size-body-lg;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet-sm) {
+  .specialFeature { 
+    padding: $section-page-padding-tablet;
+
+    &__text {
+      font-size: $font-size-body-md;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile-portrait-xl) {
+  .specialFeature { 
+
+    &__text {
+      font-size: $font-size-body-sm;
+    }
+  }
+}

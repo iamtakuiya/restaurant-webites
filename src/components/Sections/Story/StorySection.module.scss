@@ -1,22 +1,14 @@
 @use 'sass:color';
-@use '../../../styles/_variables.scss';
+@use '../../../styles/_variables.scss' as *;
 
 /* ===========================
 * Story Section
 ============================== */
-
 .story {
-  padding: variables.$section-page-padding;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5rem;
-  font-family: variables.$body-font;
   
   &__content {
-    background-color: variables.$color-primary;
-    color: variables.$color-secondary;
+    background-color: $color-primary;
+    color: $color-secondary;
     padding: 60px;
     display: flex;
     align-items: center;
@@ -33,18 +25,19 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    text-align: center;
   }
   
   &__kicker {
-    font-family: variables.$heading-font;
-    font-size: variables.$font-size-kicker;
+    font-family: $heading-font;
+    font-size: $font-size-kicker;
     line-height: 150%;
   }
   
   &__heading {
     margin: -0.5rem 0;
     font-family: inherit;
-    font-size: variables.$font-size-heading;
+    font-size: $font-size-heading;
     line-height: 120%;
     color: inherit;
     white-space: nowrap;
@@ -52,15 +45,83 @@
   
   &__text {
     color: inherit;
-    font-size: variables.$font-size-body-lg;
+    font-size: $font-size-body-lg;
     font-weight: 300;
   }
   
   &__img {
     flex: 0.58;
+    min-width: 441px;
+    min-height: 206px;
   }
 }
 
 .reverse {
   flex-direction: row-reverse;
+}
+
+/* ===========================
+* Responsive
+============================== */
+@media (max-width: $breakpoint-laptop) {
+  .story {
+    
+    &__content {
+      gap: 1rem;
+    }
+
+    &__description {
+      padding: unset;
+    }
+
+    &__heading {
+      font-size: $font-size-subheading;
+    }
+    
+    &__text {
+      font-size: $font-size-body-lg;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet-lg) {
+  .story {
+
+    &__content {
+      flex-direction: column;
+      padding: 0 30px;
+    }
+
+    &__heading {
+      font-size: $font-size-subheading;
+    }
+    
+    &__text {
+      font-size: $font-size-body-lg;
+    }
+
+    &__img {
+      // flex: 1;
+    }
+
+  }
+}
+
+@media (max-width: $breakpoint-mobile-portrait-xl) {
+  .story {
+
+    &__content {
+      width: 100%;
+      padding: 0;
+    }
+    
+    &__text {
+      font-size: $font-size-body-md;
+    }
+
+    &__img {
+      min-width: 320px;
+      min-height: unset;
+    }
+  }
 }

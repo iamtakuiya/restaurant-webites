@@ -57,6 +57,43 @@
 /* ===========================
 * Responsive
 ============================== */
-@media (max-width: $breakpoint-tablet-lg) {
+@media (max-width: $breakpoint-tablet-sm) {
+  .eventBanner {
+    display: flex; 
+  }
+}
 
+@media (max-width: $breakpoint-mobile-portrait-xl) {
+  .eventBanner {
+
+    &__img {
+      width: 263px;
+      height: 320px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      box-shadow: $color-shadow;
+    }
+
+    &__content {
+      padding: 2rem;
+      width: 323px;
+      // height: 320px;
+    }
+
+    &__description {
+      font-size: $font-size-body-sm;
+      font-weight: 300;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile-portrait-sm) {
+  .eventBanner {
+
+    &__content {
+      padding: 2rem;
+      width: 283px;
+    }
+  }
 }

@@ -77,8 +77,17 @@ const Header: React.FC= () => {
           <li className={styles.navbar__item}>
             <Link className={styles.navbar__link} to="/events" onClick={closeNavMenu}>Events Info</Link>
           </li>
+          <div className={`btnContainer ${styles.navbar__btnMobileReserve}`}>
+            <Link to="/reserve">
+              <Button 
+                variant='reserve' 
+                cta='Reserve' 
+              />
+            </Link>
+          </div>
         </ul>
       </nav>
+      {/* Only display when screen size is $breakpoint-tablet-md: 860px */}
       <div className={`btnContainer ${styles.navbar__btnReserve}`}>
         <Link to="/reserve">
           <Button 

@@ -1,5 +1,5 @@
 @use 'sass:color';
-@use '../../../styles/_variables';
+@use '../../../styles/_variables.scss' as *;
 
 /* ===========================
 * Discover upcoming block
@@ -15,13 +15,25 @@
 
   &__header {
     padding: 10px;
-    color: variables.$color-primary;
+    color: $color-primary;
     text-align: center;
     z-index: 1;
   }
   
   &__headline {
-    font-size: variables.$font-size-subheading;
+    font-size: $font-size-subheading;
     color: inherit;
   }
+}
+
+/* ===========================
+* Responsive
+============================== */
+@media (max-width: $breakpoint-tablet-sm) {
+  .discover {
+
+    &__headline {
+      font-size: $font-size-title-lg;
+    }
+  }  
 }
