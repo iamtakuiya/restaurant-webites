@@ -52,6 +52,15 @@ input {
   }
 }
 
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"] {
+  /* ensure default appearance is preserved */
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  appearance: auto;
+}
+
 /* ===========================
 * Image Styles
 ============================== */
