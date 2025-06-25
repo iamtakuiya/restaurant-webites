@@ -21,8 +21,8 @@ interface FindTableFormProps {
 
 const getFindTableFields = (formRowFullClassName?: string): FieldConfig[] => [
   { label: 'Number of people', name: 'people', type: 'number', placeholder: 'Number of people', rowClass: formRowFullClassName },
-  { label: 'Date', name: 'date', type: 'date', placeholder: 'Date', rowClass: formRowFullClassName },
-  { label: 'Time', name: 'date', type: 'time', placeholder: 'Time', rowClass: formRowFullClassName },
+  { label: 'Date', name: 'date', type: 'date', placeholder: 'dd/mm/yyyy', rowClass: formRowFullClassName },
+  { label: 'Time', name: 'date', type: 'time', placeholder: '--:--', rowClass: formRowFullClassName },
 ];
 
 const FindTableForm: React.FC<FindTableFormProps> = ({
