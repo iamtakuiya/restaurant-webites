@@ -152,6 +152,10 @@
 
   .form {
     grid-template-columns: 1fr;
+
+    &__input {
+      min-width: 250px;
+    }
   }
 }
 
