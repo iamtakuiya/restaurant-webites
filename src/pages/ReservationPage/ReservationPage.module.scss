@@ -99,11 +99,12 @@
 
   &__input {
     height: 48px;
+    max-height: 48px;
     padding: 0 6px;
     outline: $color-accent;
     border: none;
     border-bottom: 1px solid $color-accent;
-    // background-color: transparent;
+    background-color: $color-input-field-bg;
     color: inherit;
   }
 

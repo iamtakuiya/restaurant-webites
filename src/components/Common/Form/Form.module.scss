@@ -31,12 +31,13 @@
 
   &__input {
     height: 34px;
+    max-height: 34px;
     width: 100%;
     padding: 0 6px;
     outline: variables.$color-accent;
     border: none;
     border-bottom: 1px solid variables.$color-accent;
-    background-color: transparent;
+    background-color: $color-input-field-bg;
     color: inherit;
   }
 }
