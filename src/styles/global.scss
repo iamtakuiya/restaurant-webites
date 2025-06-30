@@ -53,6 +53,26 @@ input {
       background-color: inherit;
     }
   }
+  
+  &[type="time"] {
+    &::-webkit-datetime-edit-year-field,
+    &::-webkit-datetime-edit-month-field,
+    &::-webkit-datetime-edit-day-field {
+      color: inherit;
+      background: inherit;
+      opacity: 0.8;
+    }
+
+    &::-webkit-calendar-picker-indicator {
+      width: 24px;
+      height: 24px;
+      color-scheme: inherit;
+      cursor: pointer;
+      opacity: 0.8;
+      color: inherit;
+      background-color: inherit;
+    }
+  }
 }
 
 input[type="date"],

@@ -116,11 +116,24 @@
     &::-webkit-datetime-edit-year-field,
     &::-webkit-datetime-edit-month-field,
     &::-webkit-datetime-edit-day-field {
-      color: inherit;
+      color: $color-secondary;
       opacity: 0.8;
     }
 
     &::-webkit-calendar-picker-indicator {
+      color-scheme: inherit;
+    }
+  }
+ 
+  &__input[type="time"] {
+    &::-webkit-datetime-edit-year-field,
+    &::-webkit-datetime-edit-month-field,
+    &::-webkit-datetime-edit-day-field {
+      color: $color-secondary;
+      opacity: 0.8;
+    }
+
+    &::-webkit-calendar-picker-indicator  {
       color-scheme: inherit;
     }
   }
