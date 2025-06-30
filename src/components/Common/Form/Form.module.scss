@@ -1,73 +1,83 @@
-@use 'sass:color';
-@use '../../styles/_variables.scss';
+// @use 'sass:color';
+// @use '../../styles/_variables.scss';
 
-:root {
-  --image1: url('../../assets/images/events/image-1.png');
-  --image2: url('../../assets/images/events/image-2.png');
-}
+// :root {
+//   --image1: url('../../assets/images/events/image-1.png');
+//   --image2: url('../../assets/images/events/image-2.png');
+// }
 
-/* ===========================
-* Book a Table
-============================== */
-.form {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  gap: 1rem;
+// /* ===========================
+// * Book a Table
+// ============================== */
+// .form {
+//   display: grid;
+//   grid-template-columns: repeat(2, 2fr);
+//   gap: 1rem;
 
-  &__fieldItem {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    border: none;
-  }
+//   &__fieldItem {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: stretch;
+//     border: none;
+//   }
 
-  &__fieldItem:last-child {
-    margin-top: 1rem;
-  }
+//   &__fieldItem:last-child {
+//     margin-top: 1rem;
+//   }
 
-  &__label {
-    display: none;
-  }
+//   &__label {
+//     display: none;
+//   }
 
-  &__input {
-    height: 34px;
-    max-height: 34px;
-    width: 100%;
-    padding: 0 6px;
-    outline: variables.$color-accent;
-    border: none;
-    border-bottom: 1px solid variables.$color-accent;
-    background-color: $color-input-field-bg;
-    color: inherit;
-  }
-}
+//   &__input {
+//     height: 34px;
+//     max-height: 34px;
+//     width: 100%;
+//     padding: 0 6px;
+//     outline: variables.$color-accent;
+//     border: none;
+//     border-bottom: 1px solid variables.$color-accent;
+//     background-color: $color-input-field-bg;
+//     color: inherit;
+//   }
+// }
 
-input {
+// input {
 
-  &::placeholder {
-    color: variables.$color-primary;
-    opacity: 0.8;
-  }
-}
+//   &::placeholder {
+//     color: variables.$color-primary;
+//     opacity: 0.8;
+//   }
+// }
 
-input[type="date"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+// input[type="date"] {
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   appearance: none;
 
-  // background-image: url();
-  color: variables.$color-primary;
-  opacity: 0.8;
-  appearance: none;
-}
+//   // background-image: url();
+//   color: variables.$color-primary;
+//   opacity: 0.8;
+//   appearance: none;
 
-input[type="date"]::-webkit-calendar-picker-indicator {
-  width: 24px;
-  height: 24px;
-  color-scheme: dark;
-  cursor: pointer;
-}
+//   &::placeholder {
+//     color: variables.$color-primary;
+//     opacity: 0.8;
+//   }
+// }
 
-.form__row--full {
-  grid-column: 1 / -1;
-}
+// input[type="date"]::-webkit-calendar-picker-indicator {
+//   width: 24px;
+//   height: 24px;
+//   color-scheme: dark;
+//   cursor: pointer;
+
+//   &::placeholder {
+//     color: variables.$color-primary;
+//     opacity: 0.8;
+//   }
+// }
+
+// .form__row--full {
+//   grid-column: 1 / -1;
+// }

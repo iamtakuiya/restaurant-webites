@@ -98,6 +98,11 @@
     border-bottom: 1px solid $color-accent;
     background-color: transparent;
     color: inherit;
+
+      &::placeholder {
+        color: $color-primary;
+        opacity: 0.8;
+    }
   }
 }
 

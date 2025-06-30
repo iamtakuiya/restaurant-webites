@@ -30,7 +30,7 @@ a {
 ============================== */
 input {
   &::placeholder {
-    color: $color-primary;
+    color: inherit;
     opacity: 0.8;
   }
 
@@ -38,7 +38,8 @@ input {
     &::-webkit-datetime-edit-year-field,
     &::-webkit-datetime-edit-month-field,
     &::-webkit-datetime-edit-day-field {
-      color: $color-primary;
+      color: inherit;
+      background: inherit;
       opacity: 0.8;
     }
 
@@ -48,6 +49,8 @@ input {
       color-scheme: dark;
       cursor: pointer;
       opacity: 0.8;
+      color: inherit;
+      background-color: inherit;
     }
   }
 }
