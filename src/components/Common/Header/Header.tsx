@@ -53,7 +53,7 @@ const Header: React.FC= () => {
   return (
     <header className={styles.header}>
       <div className={styles.logoContainer}>
-        <img src={logo} alt="LaidBack logo" />
+        <Link to={"/"}><img src={logo} alt="LaidBack logo" /></Link>
       </div>
       <nav 
         ref={menuRef}
